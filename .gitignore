@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+explorations/knowledge_protocol_validation_v4/data/raw/*.json
+explorations/knowledge_protocol_validation_v4/data/outputs/*
+!data/outputs/.gitkeep
