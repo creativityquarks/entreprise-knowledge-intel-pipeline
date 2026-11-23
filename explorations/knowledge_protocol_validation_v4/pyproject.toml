@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "knowledge-protocol-validation"
+version = "0.1.0"
+description = "Exploratory knowledge pipeline tutorial — fixture + live source validation"
+authors = ["Data Engineering Team <team@example.invalid>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+psycopg = {version = ">=3.2,<4", extras = ["binary"]}
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8,<10"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

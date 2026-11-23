@@ -1,0 +1,7 @@
+{
+  "id":"CVE-2021-44228", "modified":"2026-01-01T00:00:00Z",
+  "aliases":["GHSA-jfh8-c2jp-5v3q"],
+  "affected":[{"package":{"ecosystem":"Maven","name":"org.apache.logging.log4j:log4j-core"},"ranges":[{"type":"ECOSYSTEM","events":[{"introduced":"2.0-beta9"},{"fixed":"2.15.0"}]}]}],
+  "references":[{"type":"ADVISORY","url":"https://logging.apache.org/log4j/2.x/security.html"}],
+  "_fixture_notice":"Curated reduced shape based on public Log4Shell disclosures, not a verbatim live API response; dates are synthetic."
+}
