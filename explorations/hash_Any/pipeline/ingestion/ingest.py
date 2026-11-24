@@ -9,7 +9,8 @@ from datetime import datetime, timezone
 from ingestion.manifest import register_snapshot, save_query_run_manifest
 from ingestion.osv_query import query_sbom_components
 from ingestion.providers import osv, sbom
-from ingestion.storage import compute_hash, save_snapshot
+from ingestion.storage import compute_canonical_json_hash, compute_hash, save_snapshot
+
 
 MAX_SIZE = 5_000_000  # 5 MB
 TIMEOUT = 30  # seconds
@@ -102,7 +103,7 @@ def main() -> None:
             print(f"[ERROR] Run {run_id} | OSV | {vuln_id} | {error}", file=sys.stderr)
             sys.exit(1)
 
-        sha256 = compute_hash(raw)
+        sha256 = compute_canonical_json_hash(raw)
         file_path = save_snapshot("osv", raw, sha256)
         registered = register_snapshot(
             source="osv",

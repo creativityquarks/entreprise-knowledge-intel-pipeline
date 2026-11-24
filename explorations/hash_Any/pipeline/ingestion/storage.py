@@ -8,6 +8,7 @@ Manage Bronze raw snapshot storage.
 """
 
 import hashlib
+import json
 from pathlib import Path
 
 # Resolve the MVP root directory
@@ -20,6 +21,17 @@ RAW_DIR = ROOT / "data" / "bronze" / "raw"
 def compute_hash(raw: bytes) -> str:
     """Generate a SHA-256 hash from the original response bytes."""
     return hashlib.sha256(raw).hexdigest()
+
+
+def compute_canonical_json_hash(raw: bytes) -> str:
+    """Generate a deterministic SHA-256 hash independent of JSON whitespace/key order."""
+    canonical = json.dumps(
+        json.loads(raw),
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
 
 
 def save_snapshot(source: str, raw: bytes, sha256: str) -> Path:

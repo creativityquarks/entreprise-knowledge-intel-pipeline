@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 
 from ingestion.manifest import register_snapshot
 from ingestion.providers import osv
-from ingestion.storage import compute_hash, save_snapshot
+from ingestion.storage import compute_canonical_json_hash, save_snapshot
 
 MAX_SIZE = 5_000_000
 TIMEOUT = 30
@@ -115,7 +115,7 @@ def query_sbom_components(
             raw, metadata = post_osv_query(
                 comp["package_name"], comp["installed_version"]
             )
-            query_sha256 = compute_hash(raw)
+            query_sha256 = compute_canonical_json_hash(raw)
             file_path = save_snapshot("osv_queries", raw, query_sha256)
             register_snapshot(
                 source="osv_queries",
