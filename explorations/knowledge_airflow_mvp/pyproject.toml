@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "knowledge-airflow-mvp"
+version = "0.1.0"
+description = "OSV + CycloneDX MVP managed by Airflow"
+authors = ["Bootcamp team"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+requests = ">=2.32,<3"
+google-cloud-storage = ">=2.18,<4"
+google-cloud-bigquery = ">=3.25,<4"
+dbt-bigquery = ">=1.9,<1.10"
+streamlit = ">=1.40,<2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8,<10"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"

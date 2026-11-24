@@ -1,0 +1,31 @@
+version: 2
+sources:
+  - name: silver
+    database: "{{ env_var('GCP_PROJECT') }}"
+    schema: vulnerability_silver
+    tables:
+      - name: applications
+      - name: sboms
+      - name: sbom_components
+      - name: sbom_dependencies
+      - name: vulnerabilities
+      - name: component_findings
+models:
+  - name: mart_application_overview
+    columns:
+      - name: application_id
+        tests: [not_null, unique]
+  - name: mart_application_findings
+    columns:
+      - name: application_id
+        tests: [not_null]
+  - name: graph_nodes
+    columns:
+      - name: node_id
+        tests: [not_null, unique]
+  - name: graph_edges
+    columns:
+      - name: source_id
+        tests: [not_null]
+      - name: target_id
+        tests: [not_null]
