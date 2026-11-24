@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "osv": {
+      "3d08e490b93bd52ce677df60ae5bc25c1b9d2692f4be74b15185e12a58b86bfe": {
+        "source_url": "https://storage.googleapis.com/cve-osv-conversion/osv-output/CVE-2021-44228.json",
+        "size_bytes": 112802,
+        "content_type": "application/json",
+        "etag": "\"0c2e598c8436436d33e925d821da64bb\"",
+        "last_modified": "Sat, 24 Oct 2026 10:30:51 GMT",
+        "raw_path": "data/bronze/raw/osv/3d08e490b93bd52ce677df60ae5bc25c1b9d2692f4be74b15185e12a58b86bfe.json",
+        "first_seen_utc": "2026-11-24T12:35:18.001097+00:00",
+        "run_id": "20261124T123517637831Z"
+      },
+      "983c4461585585e92e07d85db3d709a4e5e6654413ea4f6feaa6c552df77c482": {
+        "source_url": "https://storage.googleapis.com/cve-osv-conversion/osv-output/CVE-2021-45046.json",
+        "size_bytes": 27219,
+        "content_type": "application/json",
+        "etag": "\"954b1bad9601a3c89b7de68ebb1158b6\"",
+        "last_modified": "Mon, 26 Oct 2026 10:30:37 GMT",
+        "raw_path": "data/bronze/raw/osv/983c4461585585e92e07d85db3d709a4e5e6654413ea4f6feaa6c552df77c482.json",
+        "first_seen_utc": "2026-11-24T12:57:10.393278+00:00",
+        "run_id": "20261124T125709789792Z"
+      }
+    },
+    "sbom": {}
+  }
+}
