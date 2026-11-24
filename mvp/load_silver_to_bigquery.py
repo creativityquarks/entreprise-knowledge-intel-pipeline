@@ -142,10 +142,11 @@ def load_dataframe(client, table_name: str, df: pd.DataFrame, df_hash: str):
 # --------------------------------------------------
 
 def main(dataframes: dict[str, pd.DataFrame] | None = None):
+    silver_state = None
     if dataframes is None:
         # Adjust this import to match your Silver module filename (without .py).
-        from build_silver import main as run_silver
-        dataframes = run_silver()
+            from build_silver import main as run_silver, save_state as save_silver_state
+            dataframes, silver_state = run_silver()
 
     client = bigquery.Client(project=PROJECT_ID)
 
@@ -177,6 +178,9 @@ def main(dataframes: dict[str, pd.DataFrame] | None = None):
 
         state["loaded"].append(load_key)
         save_state(state)
+
+    if silver_state is not None:
+        save_silver_state(silver_state)
 
     print("\nBigQuery ingestion completed.")
 

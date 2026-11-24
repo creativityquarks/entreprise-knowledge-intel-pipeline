@@ -1,3 +1,5 @@
+# /!\ Don't execute this scripts separately: load_silver_to_bigquery.py already calls this one.
+
 import json
 from pathlib import Path
 
@@ -299,7 +301,6 @@ def process_source(record, state):
             dfs["sboms"].loc[0, "retrieved_at"] = retrieved_at
 
     state["processed"].append(source_key)
-    save_state(state)
 
     print(f"Processed: {source_key}")
     return dfs
@@ -316,7 +317,7 @@ def main():
 
     if not manifest_files:
         print("No manifests found.")
-        return {}
+        return {}, state
 
     collected = {}
 
@@ -338,7 +339,7 @@ def main():
     }
 
     print("\nSilver transformation completed.")
-    return result
+    return result, state
 
 
 if __name__ == "__main__":
