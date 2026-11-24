@@ -1,0 +1,8 @@
+.venv/
+.env
+data/
+data_bkp/
+target/
+logs/
+dbt_packages/
+__pycache__/
