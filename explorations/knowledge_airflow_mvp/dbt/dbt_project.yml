@@ -1,0 +1,11 @@
+name: knowledge_mvp
+version: 1.0.0
+config-version: 2
+profile: knowledge_mvp
+model-paths: ["models"]
+models:
+  knowledge_mvp:
+    +materialized: view
+
+target-path: /tmp/dbt-target
+log-path: /tmp/dbt-logs

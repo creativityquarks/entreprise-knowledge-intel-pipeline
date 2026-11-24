@@ -1,0 +1,11 @@
+knowledge_mvp:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT') }}"
+      dataset: vulnerability_gold
+      location: EU
+      threads: 2
+      timeout_seconds: 300
