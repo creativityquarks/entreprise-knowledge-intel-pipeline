@@ -15,7 +15,7 @@ import json
 import urllib.request
 from datetime import datetime, timezone
 
-from ingestion.providers import osv
+from ingestion.providers import osv, sbom
 from ingestion.storage import compute_hash, save_snapshot
 from ingestion.manifest import register_snapshot
 
@@ -115,6 +115,37 @@ def main():
         print("Manifest:", "updated" if registered else "unchanged")
         print()
 
+    for sbom_id in sbom.list_sbom_ids():
+            url = sbom.get_url(sbom_id)
+
+            try:
+                raw, metadata = fetch_json(url)
+            except (urllib.error.URLError, TimeoutError, ValueError) as error:
+                print(
+                    f"[ERROR] Run {run_id} | SBOM | {sbom_id} | {error}",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+
+            # Tag which application/source this SBOM belongs to for Silver
+            metadata["application_id"] = sbom_id
+
+            sha256 = compute_hash(raw)
+            file_path = save_snapshot("sbom", raw, sha256)
+            registered = register_snapshot(
+                source="sbom",
+                sha256=sha256,
+                file_path=file_path,
+                metadata=metadata,
+                run_id=run_id,
+            )
+
+            print("Run ID:", run_id)
+            print("SBOM:", sbom_id)
+            print("SHA-256:", sha256)
+            print("Snapshot:", file_path)
+            print("Manifest:", "updated" if registered else "unchanged")
+            print()
 
 # Execute the workflow when the module is run directly
 if __name__ == "__main__":
