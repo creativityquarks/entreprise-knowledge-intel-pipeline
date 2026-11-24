@@ -1,0 +1,53 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:11111111-2222-3333-4444-555555555555",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-01-01T00:00:00Z",
+    "component": {
+      "type": "application",
+      "bom-ref": "pkg:maven/com.example/synthetic-billing@1.0.0",
+      "group": "com.example",
+      "name": "synthetic-billing",
+      "version": "1.0.0",
+      "description": "SYNTHETIC TEST SBOM for local pipeline verification only"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.example/billing-helper@1.0.0",
+      "group": "com.example",
+      "name": "billing-helper",
+      "version": "1.0.0",
+      "purl": "pkg:maven/com.example/billing-helper@1.0.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-core",
+      "version": "2.14.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:maven/com.example/synthetic-billing@1.0.0",
+      "dependsOn": [
+        "pkg:maven/com.example/billing-helper@1.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.example/billing-helper@1.0.0",
+      "dependsOn": [
+        "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "dependsOn": []
+    }
+  ]
+}
