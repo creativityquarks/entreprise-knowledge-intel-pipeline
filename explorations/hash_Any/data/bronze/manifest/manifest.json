@@ -2,185 +2,105 @@
   "schema_version": 1,
   "sources": {
     "osv": {
-      "3d08e490b93bd52ce677df60ae5bc25c1b9d2692f4be74b15185e12a58b86bfe": {
-        "source_url": "https://storage.googleapis.com/cve-osv-conversion/osv-output/CVE-2021-44228.json",
-        "size_bytes": 112802,
-        "content_type": "application/json",
-        "etag": "\"0c2e598c8436436d33e925d821da64bb\"",
-        "last_modified": "Sat, 24 Oct 2026 10:30:51 GMT",
-        "raw_path": "data/bronze/raw/osv/3d08e490b93bd52ce677df60ae5bc25c1b9d2692f4be74b15185e12a58b86bfe.json",
-        "first_seen_utc": "2026-11-24T12:35:18.001097+00:00",
-        "run_id": "20261124T123517637831Z"
-      },
-      "983c4461585585e92e07d85db3d709a4e5e6654413ea4f6feaa6c552df77c482": {
-        "source_url": "https://storage.googleapis.com/cve-osv-conversion/osv-output/CVE-2021-45046.json",
-        "size_bytes": 27219,
-        "content_type": "application/json",
-        "etag": "\"954b1bad9601a3c89b7de68ebb1158b6\"",
-        "last_modified": "Mon, 26 Oct 2026 10:30:37 GMT",
-        "raw_path": "data/bronze/raw/osv/983c4461585585e92e07d85db3d709a4e5e6654413ea4f6feaa6c552df77c482.json",
-        "first_seen_utc": "2026-11-24T12:57:10.393278+00:00",
-        "run_id": "20261124T125709789792Z"
-      },
-      "7f9017c6dbfe9bda107f3e8cb355af069e459c0481a07130ed329295783db7c4": {
+      "91f7e0469bd60e0f05efb5ac9271181590eba94aef1e9265cbed85dc85c36956": {
         "source_url": "https://api.osv.dev/v1/vulns/CVE-2021-44228",
         "size_bytes": 61567,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/7f9017c6dbfe9bda107f3e8cb355af069e459c0481a07130ed329295783db7c4.json",
-        "first_seen_utc": "2026-11-24T16:16:09.529017+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/91f7e0469bd60e0f05efb5ac9271181590eba94aef1e9265cbed85dc85c36956.json",
+        "first_seen_utc": "2026-11-24T16:31:17.585201+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "416b7e19026aa1b3c5241afb5c1fa6ad7e1a6454f8e1a2df84b4a77bbea92554": {
+      "24abeb70c4997eca5d096c9257c4de090b199c80378cfdf674aca21a17e3a50a": {
         "source_url": "https://api.osv.dev/v1/vulns/CVE-2021-45046",
         "size_bytes": 15197,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/416b7e19026aa1b3c5241afb5c1fa6ad7e1a6454f8e1a2df84b4a77bbea92554.json",
-        "first_seen_utc": "2026-11-24T16:16:09.769679+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/24abeb70c4997eca5d096c9257c4de090b199c80378cfdf674aca21a17e3a50a.json",
+        "first_seen_utc": "2026-11-24T16:31:17.867636+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "b5cf0d59b4ce187a0f51d51cfda767006c290b146488790c661052c2c98dbb04": {
+      "2f3afc515749133a7d3a64d00b3db2eb5fd40187170abbf830c2c0ac4821d5ed": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-3pxv-7cmr-fjr4",
         "size_bytes": 3839,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/b5cf0d59b4ce187a0f51d51cfda767006c290b146488790c661052c2c98dbb04.json",
-        "first_seen_utc": "2026-11-24T16:16:10.026817+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/2f3afc515749133a7d3a64d00b3db2eb5fd40187170abbf830c2c0ac4821d5ed.json",
+        "first_seen_utc": "2026-11-24T16:31:18.230483+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "6af6855a3aa72ba1e89b03618e61a6f78a5b44c273fb020d815c210ed37dada5": {
+      "9914c3c931428bea140b33ebf2d33ba4a717db5e52daf9f16ab5d723cee54b47": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-6hg6-v5c8-fphq",
         "size_bytes": 3792,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/6af6855a3aa72ba1e89b03618e61a6f78a5b44c273fb020d815c210ed37dada5.json",
-        "first_seen_utc": "2026-11-24T16:16:10.202955+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/9914c3c931428bea140b33ebf2d33ba4a717db5e52daf9f16ab5d723cee54b47.json",
+        "first_seen_utc": "2026-11-24T16:31:18.446431+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "d4f6b0f5e1dcb149ccdccd2260e3d91266feb91a7bd8fb5107319c71ddb662a6": {
+      "d2c38a685a4bd4b61ee32732ea811cc213d4a6b278b4afa207e8b1303fabebb8": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-7rjr-3q55-vv33",
         "size_bytes": 7763,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/d4f6b0f5e1dcb149ccdccd2260e3d91266feb91a7bd8fb5107319c71ddb662a6.json",
-        "first_seen_utc": "2026-11-24T16:16:10.550192+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/d2c38a685a4bd4b61ee32732ea811cc213d4a6b278b4afa207e8b1303fabebb8.json",
+        "first_seen_utc": "2026-11-24T16:31:18.641758+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "238eef41059faf105339bc6e42a143cbe13b6ff565c9dcd0f65d6645c6442d29": {
+      "263b330661319cfb5805039caed4a9d2081e237fb21d8e90fea1cca1fe315f0b": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-8489-44mv-ggj8",
         "size_bytes": 6786,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/238eef41059faf105339bc6e42a143cbe13b6ff565c9dcd0f65d6645c6442d29.json",
-        "first_seen_utc": "2026-11-24T16:16:10.807344+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/263b330661319cfb5805039caed4a9d2081e237fb21d8e90fea1cca1fe315f0b.json",
+        "first_seen_utc": "2026-11-24T16:31:18.830734+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "c207e7104afebc4f01862cc6a3353c9010a79023f2c0689f124f70cef623cd1e": {
+      "f0d27130aa8056c711cf020e853dfc0df0efff547aea8b1d3e8711059b3e54ec": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-h383-gmxw-35v2",
         "size_bytes": 3494,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/c207e7104afebc4f01862cc6a3353c9010a79023f2c0689f124f70cef623cd1e.json",
-        "first_seen_utc": "2026-11-24T16:16:11.124129+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/f0d27130aa8056c711cf020e853dfc0df0efff547aea8b1d3e8711059b3e54ec.json",
+        "first_seen_utc": "2026-11-24T16:31:19.029899+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "27ca1e4ec04ec43a44bda9d320e7360fb9580a61061c913327ded11f99ee4ce9": {
+      "3f475703fd0c7f3b477a873124f8bc93c08a267d45428c36699a6304957b561b": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-jfh8-c2jp-5v3q",
         "size_bytes": 20722,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/27ca1e4ec04ec43a44bda9d320e7360fb9580a61061c913327ded11f99ee4ce9.json",
-        "first_seen_utc": "2026-11-24T16:16:11.396887+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/3f475703fd0c7f3b477a873124f8bc93c08a267d45428c36699a6304957b561b.json",
+        "first_seen_utc": "2026-11-24T16:31:19.239724+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "4ec965b24589c02cf0cc6a738acac61936c28c7c61d71d07d081a04d1216c15a": {
+      "81e155eaa8476307b275f8005b2bbef6ef080b4f740e8e747b25757513d69867": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-p6xc-xr62-6r2g",
         "size_bytes": 6459,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/4ec965b24589c02cf0cc6a738acac61936c28c7c61d71d07d081a04d1216c15a.json",
-        "first_seen_utc": "2026-11-24T16:16:11.618358+00:00",
-        "run_id": "20261124T161608412987Z"
+        "raw_path": "data/bronze/raw/osv/81e155eaa8476307b275f8005b2bbef6ef080b4f740e8e747b25757513d69867.json",
+        "first_seen_utc": "2026-11-24T16:31:19.569407+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "db6d14fdc3342f282c95eebd0534e9bec3e850e9745d6804cd43e9dbf4180beb": {
+      "7a5ceea72c2fcfaba9937fa5af9efffddbcdee91ee49c5b5fb3a398250b8e5c6": {
         "source_url": "https://api.osv.dev/v1/vulns/GHSA-vc5p-v9hr-52mj",
         "size_bytes": 3519,
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/db6d14fdc3342f282c95eebd0534e9bec3e850e9745d6804cd43e9dbf4180beb.json",
-        "first_seen_utc": "2026-11-24T16:16:11.904427+00:00",
-        "run_id": "20261124T161608412987Z"
-      },
-      "00a4051d63f1f0fb5ddbd519e76e924519e696e5a3c166e31802be660611abf0": {
-        "source_url": "https://api.osv.dev/v1/vulns/CVE-2021-44228",
-        "size_bytes": 61567,
-        "content_type": "application/json",
-        "etag": null,
-        "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/00a4051d63f1f0fb5ddbd519e76e924519e696e5a3c166e31802be660611abf0.json",
-        "first_seen_utc": "2026-11-24T16:18:34.119832+00:00",
-        "run_id": "20261124T161833278561Z"
-      },
-      "6eff7cd2038cd331d9ead9e59c88a6cb59b0e08dbcc32ed9323701eee3153ef3": {
-        "source_url": "https://api.osv.dev/v1/vulns/CVE-2021-45046",
-        "size_bytes": 15197,
-        "content_type": "application/json",
-        "etag": null,
-        "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/6eff7cd2038cd331d9ead9e59c88a6cb59b0e08dbcc32ed9323701eee3153ef3.json",
-        "first_seen_utc": "2026-11-24T16:18:34.448245+00:00",
-        "run_id": "20261124T161833278561Z"
-      },
-      "dce701e7ed91c5a53df28b04bfd4adea512ced1073feca2ef4359e1d29c581ef": {
-        "source_url": "https://api.osv.dev/v1/vulns/GHSA-3pxv-7cmr-fjr4",
-        "size_bytes": 3839,
-        "content_type": "application/json",
-        "etag": null,
-        "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/dce701e7ed91c5a53df28b04bfd4adea512ced1073feca2ef4359e1d29c581ef.json",
-        "first_seen_utc": "2026-11-24T16:18:34.654031+00:00",
-        "run_id": "20261124T161833278561Z"
-      },
-      "0822d15ae2277579abcce1ba7d67b7ba8be3320133016d6872902cdffc73c4da": {
-        "source_url": "https://api.osv.dev/v1/vulns/GHSA-6hg6-v5c8-fphq",
-        "size_bytes": 3792,
-        "content_type": "application/json",
-        "etag": null,
-        "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/0822d15ae2277579abcce1ba7d67b7ba8be3320133016d6872902cdffc73c4da.json",
-        "first_seen_utc": "2026-11-24T16:18:34.934920+00:00",
-        "run_id": "20261124T161833278561Z"
-      },
-      "5438ac1679972787223adea1b5dc65aa43fae7993f96a2eb42808dba3633a2fb": {
-        "source_url": "https://api.osv.dev/v1/vulns/GHSA-8489-44mv-ggj8",
-        "size_bytes": 6786,
-        "content_type": "application/json",
-        "etag": null,
-        "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/5438ac1679972787223adea1b5dc65aa43fae7993f96a2eb42808dba3633a2fb.json",
-        "first_seen_utc": "2026-11-24T16:18:35.471023+00:00",
-        "run_id": "20261124T161833278561Z"
-      },
-      "9d2bbb07c7389fadb57a3a706619429036a954b7ba93ec70aca679be833c5066": {
-        "source_url": "https://api.osv.dev/v1/vulns/GHSA-jfh8-c2jp-5v3q",
-        "size_bytes": 20722,
-        "content_type": "application/json",
-        "etag": null,
-        "last_modified": null,
-        "raw_path": "data/bronze/raw/osv/9d2bbb07c7389fadb57a3a706619429036a954b7ba93ec70aca679be833c5066.json",
-        "first_seen_utc": "2026-11-24T16:18:36.086793+00:00",
-        "run_id": "20261124T161833278561Z"
+        "raw_path": "data/bronze/raw/osv/7a5ceea72c2fcfaba9937fa5af9efffddbcdee91ee49c5b5fb3a398250b8e5c6.json",
+        "first_seen_utc": "2026-11-24T16:31:19.760850+00:00",
+        "run_id": "20261124T163116443790Z"
       }
     },
     "sbom": {
@@ -192,8 +112,8 @@
         "last_modified": null,
         "application_id": "cyclonedx_example",
         "raw_path": "data/bronze/raw/sbom/7fd8cb263d72885d0da8510cf81d1936a70196826f2e1612c28c7735551874b1.json",
-        "first_seen_utc": "2026-11-24T14:39:14.037122+00:00",
-        "run_id": "20261124T143913247210Z"
+        "first_seen_utc": "2026-11-24T16:31:16.465043+00:00",
+        "run_id": "20261124T163116443790Z"
       },
       "4da3c2722cd737b11bf5d1961480b180d420da111a624ecba33476bc63d2829e": {
         "source_url": "file:///home/anyarlene/code/anyarlene/entreprise-knowledge-intel-pipeline/explorations/hash_Any/fixtures/synthetic_billing_sbom.json",
@@ -203,8 +123,8 @@
         "last_modified": "Tue, 24 Nov 2026 16:10:37 GMT",
         "application_id": "synthetic_billing",
         "raw_path": "data/bronze/raw/sbom/4da3c2722cd737b11bf5d1961480b180d420da111a624ecba33476bc63d2829e.json",
-        "first_seen_utc": "2026-11-24T16:16:08.639378+00:00",
-        "run_id": "20261124T161608412987Z"
+        "first_seen_utc": "2026-11-24T16:31:16.472257+00:00",
+        "run_id": "20261124T163116443790Z"
       }
     },
     "osv_queries": {
@@ -215,28 +135,18 @@
         "size_bytes": 2,
         "content_type": "application/json",
         "raw_path": "data/bronze/raw/osv_queries/44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a.json",
-        "first_seen_utc": "2026-11-24T16:16:08.899912+00:00",
-        "run_id": "20261124T161608412987Z"
+        "first_seen_utc": "2026-11-24T16:31:16.806829+00:00",
+        "run_id": "20261124T163116443790Z"
       },
-      "2318f18cdaade5be169dd61ac79cae1f7095fb37967fa1a5b38a96d8bf1bed90": {
+      "0635e5b60ebc51d30901ad5e6bd862ca1ea4509d92ae44ed9aee8c9cfc9ed11b": {
         "source_url": "https://api.osv.dev/v1/query",
         "package_name": "org.apache.logging.log4j:log4j-core",
         "installed_version": "2.14.1",
         "size_bytes": 56393,
         "content_type": "application/json",
-        "raw_path": "data/bronze/raw/osv_queries/2318f18cdaade5be169dd61ac79cae1f7095fb37967fa1a5b38a96d8bf1bed90.json",
-        "first_seen_utc": "2026-11-24T16:16:09.285458+00:00",
-        "run_id": "20261124T161608412987Z"
-      },
-      "c27b3798f15c465cc8d06934094e733fde5af2bf0d6b7bf2b9b639ad6aad854e": {
-        "source_url": "https://api.osv.dev/v1/query",
-        "package_name": "org.apache.logging.log4j:log4j-core",
-        "installed_version": "2.14.1",
-        "size_bytes": 56393,
-        "content_type": "application/json",
-        "raw_path": "data/bronze/raw/osv_queries/c27b3798f15c465cc8d06934094e733fde5af2bf0d6b7bf2b9b639ad6aad854e.json",
-        "first_seen_utc": "2026-11-24T16:18:33.894861+00:00",
-        "run_id": "20261124T161833278561Z"
+        "raw_path": "data/bronze/raw/osv_queries/0635e5b60ebc51d30901ad5e6bd862ca1ea4509d92ae44ed9aee8c9cfc9ed11b.json",
+        "first_seen_utc": "2026-11-24T16:31:17.235429+00:00",
+        "run_id": "20261124T163116443790Z"
       }
     }
   }
