@@ -23,6 +23,18 @@
         "run_id": "20261124T125709789792Z"
       }
     },
-    "sbom": {}
+    "sbom": {
+      "7fd8cb263d72885d0da8510cf81d1936a70196826f2e1612c28c7735551874b1": {
+        "source_url": "https://raw.githubusercontent.com/CycloneDX/bom-examples/master/CBOM/Example-With-Dependencies/bom.json",
+        "size_bytes": 1542,
+        "content_type": "text/plain; charset=utf-8",
+        "etag": "\"43cc0ac028f1e7fb93e2a60be15634092a1224ce3036cec3549640b33dc9cc29\"",
+        "last_modified": null,
+        "application_id": "cyclonedx_example",
+        "raw_path": "data/bronze/raw/sbom/7fd8cb263d72885d0da8510cf81d1936a70196826f2e1612c28c7735551874b1.json",
+        "first_seen_utc": "2026-11-24T14:39:14.037122+00:00",
+        "run_id": "20261124T143913247210Z"
+      }
+    }
   }
 }

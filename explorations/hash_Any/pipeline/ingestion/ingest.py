@@ -115,7 +115,7 @@ def main():
         print("Manifest:", "updated" if registered else "unchanged")
         print()
 
-    for sbom_id in sbom.list_sbom_ids():
+    for sbom_id in sbom.SOURCES:
             url = sbom.get_url(sbom_id)
 
             try:
