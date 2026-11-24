@@ -13,10 +13,9 @@ DATA = ROOT / "data"
 
 MANIFEST_DIR = DATA / "metadata" / "runs"
 RAW_DIR = DATA / "raw"
-SILVER_DIR = DATA / "silver"
 STATE_FILE = DATA / "metadata" / "silver_state.json"
 
-TRANSFORM_VERSION = 1
+TRANSFORM_VERSION = 9
 
 
 # --------------------------------------------------
@@ -166,9 +165,9 @@ def transform_osv(data, source_sha256, retrieved_at):
                 })
 
     return {
-        "vulnerabilities": vulnerabilities,
-        "affected_packages": affected_packages,
-        "affected_version_events": affected_version_events,
+        "vulnerabilities": pd.DataFrame(vulnerabilities),
+        "affected_packages": pd.DataFrame(affected_packages),
+        "affected_version_events": pd.DataFrame(affected_version_events),
     }
 
 
@@ -245,36 +244,10 @@ def transform_cyclonedx(data, source_sha256):
             })
 
     return {
-        "sboms": sboms,
-        "sbom_components": sbom_components,
-        "sbom_dependencies": sbom_dependencies,
+        "sboms": pd.DataFrame(sboms),
+        "sbom_components": pd.DataFrame(sbom_components),
+        "sbom_dependencies": pd.DataFrame(sbom_dependencies),
     }
-
-
-# --------------------------------------------------
-# Save Parquet files
-# --------------------------------------------------
-
-def save_parquet(rows, table_name, source_name, source_sha256):
-    # Do not create empty Parquet files.
-    if not rows:
-        return
-
-    directory = SILVER_DIR / table_name
-    directory.mkdir(parents=True, exist_ok=True)
-
-    path = directory / f"{source_name}_{source_sha256}.parquet"
-
-    df = pd.DataFrame(rows)
-
-    df.to_parquet(
-        path,
-        engine="pyarrow",
-        compression="snappy",
-        index=False,
-    )
-
-    print(f"Saved {len(df)} rows: {path}")
 
 
 # --------------------------------------------------
@@ -285,31 +258,31 @@ def process_source(record, state):
     source_type = get_source_type(record)
 
     if source_type not in ("osv", "cyclonedx"):
-        return
+        return None
 
     source_sha256 = record.get("sha256")
 
     if not source_sha256:
-        return
+        return None
 
     source_key = f"{source_type}:{source_sha256}"
 
     if source_key in state["processed"]:
         print(f"Already processed: {source_key}")
-        return
+        return None
 
     # Ignore unsuccessful HTTP responses when a status code is available.
     status_code = record.get("status_code")
 
     if status_code is not None and not 200 <= int(status_code) < 300:
         print(f"Skipping unsuccessful source: {source_key}")
-        return
+        return None
 
     raw_path = get_raw_path(record)
 
     if not raw_path.exists():
         print(f"Raw file not found: {raw_path}")
-        return
+        return None
 
     data = read_json(raw_path)
 
@@ -319,27 +292,17 @@ def process_source(record, state):
     )
 
     if source_type == "osv":
-        tables = transform_osv(data, source_sha256, retrieved_at)
-        source_name = "osv"
-
+        dfs = transform_osv(data, source_sha256, retrieved_at)
     else:
-        tables = transform_cyclonedx(data, source_sha256)
-        tables["sboms"][0]["retrieved_at"] = retrieved_at
-        source_name = "cyclonedx"
-
-    # Write all non-empty table outputs before updating the checkpoint.
-    for table_name, rows in tables.items():
-        save_parquet(
-            rows,
-            table_name,
-            source_name,
-            source_sha256,
-        )
+        dfs = transform_cyclonedx(data, source_sha256)
+        if not dfs["sboms"].empty:
+            dfs["sboms"].loc[0, "retrieved_at"] = retrieved_at
 
     state["processed"].append(source_key)
     save_state(state)
 
     print(f"Processed: {source_key}")
+    return dfs
 
 
 # --------------------------------------------------
@@ -353,16 +316,30 @@ def main():
 
     if not manifest_files:
         print("No manifests found.")
-        return
+        return {}
+
+    collected = {}
 
     for manifest_path in manifest_files:
         records = get_manifest_records(manifest_path)
 
         for record in records:
-            process_source(record, state)
+            dfs = process_source(record, state)
+            if not dfs:
+                continue
 
-    print("\nSilver ingestion completed.")
+            for table_name, df in dfs.items():
+                collected.setdefault(table_name, []).append(df)
+
+    result = {
+        table_name: pd.concat(frames, ignore_index=True)
+        for table_name, frames in collected.items()
+        if frames
+    }
+
+    print("\nSilver transformation completed.")
+    return result
 
 
 if __name__ == "__main__":
-    main()
+    silver_dfs = main()
