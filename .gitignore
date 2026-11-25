@@ -1,0 +1,10 @@
+.mvp/venv/
+.mvp/.env
+.mvp/data/
+.mvp/data_bkp/
+.mvp/target/
+.mvp/logs/
+.mvp/dbt_packages/
+.mvp/__pycache__/
+/explorations/pitch_demo_1_v3/output/
+/explorations/knowledge_protocol_validation_v4/data/
