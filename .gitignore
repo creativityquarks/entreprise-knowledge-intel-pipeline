@@ -8,6 +8,7 @@
 ./mvp/gold/logs
 .mvp/gold/dbt_packages/
 .mvp/__pycache__/
+.mvp/*.py[cod]
 .mvp/logs/
 /explorations/pitch_demo_1_v3/output/
 /explorations/knowledge_protocol_validation_v4/data/
