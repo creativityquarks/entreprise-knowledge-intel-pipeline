@@ -1,11 +1,36 @@
+# Python virtual environments
 .venv/
-__pycache__/
-.pytest_cache/
-*.pyc
-.env
-explorations/knowledge_protocol_validation_v4/data/raw/*.json
-explorations/knowledge_protocol_validation_v4/data/outputs/*
-explorations/pitch_demo_1_v3/output/
-!data/outputs/.gitkeep
+venv/
 
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+!.env.example
+
+# MVP generated data
 /mvp/data/
+/mvp/data_bkp/
+
+# dbt generated artifacts
+/mvp/target/
+/mvp/logs/
+/mvp/gold/target/
+/mvp/gold/logs/
+/mvp/gold/dbt_packages/
+
+# Exploration outputs
+/explorations/pitch_demo_1_v3/output/
+
+# Additional rules retained from main
+.pytest_cache/
+!data/outputs/.gitkeep
+!data/outputs/.gitkeep
+/mvp/gold/profiles/.user.yml
+
+# Exploration generated data
+/explorations/knowledge_protocol_validation_v4/data/raw/*.json
+/explorations/knowledge_protocol_validation_v4/data/outputs/*
+!/explorations/knowledge_protocol_validation_v4/data/outputs/.gitkeep
