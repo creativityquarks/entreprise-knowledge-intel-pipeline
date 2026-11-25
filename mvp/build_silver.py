@@ -5,6 +5,7 @@ local skip list, provides the persistence boundary and retry safety.
 """
 import argparse
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -159,8 +160,19 @@ def main(data_dir=None, demo=False):
     """Rebuild facts from all committed manifests and select latest query state."""
     data_dir = Path(data_dir) if data_dir is not None else ROOT/'data'/ 'demo' if demo else ROOT/'data'
     contracts = read_schema_contracts(SQL_DIR)
-    paths = sorted((data_dir/'metadata'/'runs').glob('*.json'))
-    if not paths:
+    bucket_name = os.getenv('BRONZE_BUCKET', '').strip()
+    if bucket_name:
+        from google.cloud import storage
+        bucket = storage.Client().bucket(bucket_name)
+        blobs = sorted(
+            (b for b in bucket.list_blobs(prefix='metadata/runs/') if b.name.endswith('.json')),
+            key=lambda b: b.name,
+        )
+        manifests = [(f'gs://{bucket_name}/{b.name}', json.loads(b.download_as_bytes())) for b in blobs]
+    else:
+        paths = sorted((data_dir / 'metadata' / 'runs').glob('*.json'))
+        manifests = [(str(path), json.loads(path.read_text())) for path in paths]
+    if not manifests:
         raise ValueError(f'No run manifests in {data_dir}')
     collected = {name: [] for name in KEYS}
     inventories, latest = {}, {}
