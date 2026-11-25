@@ -1,0 +1,17 @@
+knowledge_gold:
+  target: live
+  outputs:
+    live:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('BQ_GOLD_DATASET') }}"
+      location: "{{ env_var('BQ_LOCATION', 'EU') }}"
+      threads: 2
+    demo:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('BQ_DEMO_GOLD_DATASET') }}"
+      location: "{{ env_var('BQ_LOCATION', 'EU') }}"
+      threads: 2
