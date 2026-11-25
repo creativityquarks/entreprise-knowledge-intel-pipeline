@@ -1,0 +1,7 @@
+.venv
+pycache
+.env
+data/
+fixtures/
+tests/
+docs/
