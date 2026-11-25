@@ -8,13 +8,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 
-def _gcs_bucket():
-    name = os.getenv('BRONZE_BUCKET', '').strip()
-    if not name:
-        return None
-    from google.cloud import storage
-    return storage.Client().bucket(name)
-
 def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
