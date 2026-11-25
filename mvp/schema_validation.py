@@ -1,6 +1,6 @@
 """Validate the MVP Silver contract without modifying source files or BigQuery.
 
-The six SQL DDL files are the single source of truth for Silver fields.
+The eight SQL DDL files are the single source of truth for Silver fields.
 Only the project's simple CREATE TABLE IF NOT EXISTS syntax is supported;
 unsupported DDL fails closed. Raw checks are structural, not full official
 OSV/CycloneDX JSON Schema validation. No network calls occur on import.
@@ -28,6 +28,7 @@ class Field:
 TABLES = (
     "sboms", "sbom_components", "sbom_dependencies", "vulnerabilities",
     "affected_packages", "affected_version_events",
+    "component_queries", "component_findings",
 )
 
 DDL = re.compile(
@@ -42,7 +43,7 @@ COLUMN = re.compile(
 
 
 def read_schema_contracts(sql_dir: Path) -> dict[str, tuple[Field, ...]]:
-    """Read the six approved DDL contracts; reject unknown or unsafe SQL."""
+    """Read the eight approved DDL contracts; reject unknown or unsafe SQL."""
     contracts = {}
     for path in sorted(Path(sql_dir).glob("*.sql")):
         match = DDL.fullmatch(path.read_text(encoding="utf-8").strip())

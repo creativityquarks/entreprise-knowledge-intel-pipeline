@@ -1,0 +1,48 @@
+version: 2
+sources:
+  - name: silver
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: "{{ env_var('BQ_DEMO_DATASET') if target.name == 'demo' else env_var('BQ_DATASET') }}"
+    tables:
+      - name: sboms
+        columns:
+          - name: source_sha256
+            data_tests: [not_null, unique]
+      - name: sbom_components
+      - name: sbom_dependencies
+      - name: vulnerabilities
+      - name: affected_packages
+      - name: affected_version_events
+      - name: component_queries
+      - name: component_findings
+  - name: work
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: "{{ target.schema }}"
+    tables:
+      - name: component_paths
+models:
+  - name: mart_application_overview
+    columns:
+      - name: application_id
+        data_tests: [not_null]
+      - name: inventory_snapshot_sha256
+        data_tests: [not_null, unique]
+      - name: risk_flag
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['QUERY_INCOMPLETE', 'KNOWN_VULNERABILITY', 'NO_MATCH_IN_QUERIED_OSV']
+  - name: mart_application_findings
+    columns:
+      - name: vulnerability_id
+        data_tests: [not_null]
+  - name: graph_nodes
+    columns:
+      - name: node_id
+        data_tests: [not_null, unique]
+  - name: graph_edges
+    columns:
+      - name: source_id
+        data_tests: [not_null]
+      - name: target_id
+        data_tests: [not_null]

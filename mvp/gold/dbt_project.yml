@@ -1,0 +1,9 @@
+name: knowledge_gold
+version: '1.0.0'
+config-version: 2
+profile: knowledge_gold
+model-paths: ['models']
+test-paths: ['tests']
+models:
+  knowledge_gold:
+    +materialized: table

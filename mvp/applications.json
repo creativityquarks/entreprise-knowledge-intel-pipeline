@@ -1,0 +1,7 @@
+[
+  {"application_id":"webgoat","repository_url":"https://github.com/WebGoat/WebGoat.git","releases":["v2023.3","v2023.4","v2023.8"],"description":"OWASP security-training web application"},
+  {"application_id":"checkstyle","repository_url":"https://github.com/checkstyle/checkstyle.git","releases":["checkstyle-10.12.0","checkstyle-10.15.0","checkstyle-10.21.0"],"description":"Java source-code analysis CLI"},
+  {"application_id":"maven","repository_url":"https://github.com/apache/maven.git","releases":["maven-3.8.8","maven-3.9.6","maven-3.9.9"],"description":"Apache build and dependency-management CLI"},
+  {"application_id":"tika","repository_url":"https://github.com/apache/tika.git","releases":["2.9.0","2.9.1","2.9.2"],"description":"Apache document extraction toolkit with CLI/server"},
+  {"application_id":"pdfbox","repository_url":"https://github.com/apache/pdfbox.git","releases":["2.0.29","2.0.30","2.0.31"],"description":"Apache PDF processing toolkit and command-line tools"}
+]

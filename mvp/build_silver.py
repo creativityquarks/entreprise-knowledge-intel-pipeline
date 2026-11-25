@@ -1,78 +1,29 @@
-"""Normalize local Bronze snapshots into validated Silver DataFrames.
-Return a pending checkpoint; only the persistence layer commits it.
+"""Offline Bronze replay into eight validated Silver DataFrames.
+
+Replaying manifests is deliberate for the small MVP: BigQuery MERGE, not a
+local skip list, provides the persistence boundary and retry safety.
 """
+import argparse
 import json
 from pathlib import Path
 
 import pandas as pd
-from schema_validation import (
-    read_schema_contracts, validate_raw_schema,
-    normalize_and_validate_dataframes,
-)
+from component_identity import inventory, maven_request
+from pipeline.ingestion.osv_query import result_ids
+from schema_validation import read_schema_contracts, validate_raw_schema, normalize_and_validate_dataframes
+from storage import ROOT, read_snapshot
 
-ROOT = Path(__file__).resolve().parent
-DATA = ROOT / "data"
-SQL_DIR = ROOT / "sql"
-MANIFEST_DIR = DATA / "metadata" / "runs"
-RAW_DIR = DATA / "raw"
-STATE_FILE = DATA / "metadata" / "silver_state.json"
-TRANSFORM_VERSION = 9
-
-
-def read_json(path):
-    with open(path, encoding="utf-8") as file:
-        return json.load(file)
-
-
-def load_state():
-    if STATE_FILE.exists():
-        state = read_json(STATE_FILE)
-        if state.get("transform_version") == TRANSFORM_VERSION:
-            return state
-    return {"transform_version": TRANSFORM_VERSION, "processed": []}
-
-
-def save_state(state):
-    """Atomically replace the local checkpoint after successful persistence."""
-    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    temporary_file = STATE_FILE.with_suffix(".tmp")
-    with open(temporary_file, "w", encoding="utf-8") as file:
-        json.dump(state, file, indent=2)
-    temporary_file.replace(STATE_FILE)
-
-
-def get_manifest_records(path):
-    manifest = read_json(path)
-    if isinstance(manifest, list):
-        return manifest
-    for key in ("records", "sources", "results"):
-        if isinstance(manifest.get(key), list):
-            return manifest[key]
-    raise ValueError(f"Unsupported manifest structure: {path}")
-
-
-def get_source_type(record):
-    source_type = record.get("source_type")
-    if source_type:
-        return source_type.lower()
-    name = record.get("name", "").lower()
-    if name.startswith("osv_"):
-        return "osv"
-    if name.startswith("cyclonedx_"):
-        return "cyclonedx"
-    return None
-
-
-def get_raw_path(record):
-    file_path = record.get("file_path")
-    if file_path:
-        path = Path(file_path)
-        if path.is_absolute() and path.exists():
-            return path
-        for candidate in (DATA / path, ROOT / path):
-            if candidate.exists():
-                return candidate
-    return RAW_DIR / record["name"] / f"{record['sha256']}.json"
+SQL_DIR = ROOT / 'sql'
+KEYS = {
+    'sboms': ['source_sha256'],
+    'sbom_components': ['source_sha256', 'component_index'],
+    'sbom_dependencies': ['source_sha256', 'parent_bom_ref', 'child_bom_ref'],
+    'vulnerabilities': ['osv_id', 'source_sha256'],
+    'affected_packages': ['osv_id', 'source_sha256', 'affected_index'],
+    'affected_version_events': ['osv_id', 'source_sha256', 'affected_index', 'range_index', 'event_index'],
+    'component_queries': ['source_sha256', 'bom_ref'],
+    'component_findings': ['source_sha256', 'bom_ref', 'vulnerability_id'],
+}
 
 
 def transform_osv(data, source_sha256, retrieved_at):
@@ -123,18 +74,13 @@ def transform_osv(data, source_sha256, retrieved_at):
     }
 
 
-def transform_cyclonedx(data, source_sha256):
+def transform_cyclonedx(data, source_sha256, application_id, retrieved_at):
     """Flatten SBOM inventory and dependsOn edges; retain root identity."""
     metadata = data.get("metadata", {})
-    root_component = metadata.get("component")
-    components = list(data.get("components", []))
-    root_ref = None
-    if root_component:
-        root_ref = root_component.get("bom-ref")
-        existing_refs = {component.get("bom-ref") for component in components}
-        if root_ref not in existing_refs:
-            components.insert(0, root_component)
-    sbom_id = data.get("serialNumber") or source_sha256
+    root_ref, refs = inventory(data)
+    components = list(refs.values())
+    root_component = refs[root_ref]
+    sbom_id = application_id
     sboms = [{
         "sbom_id": sbom_id,
         "serial_number": data.get("serialNumber"),
@@ -143,7 +89,7 @@ def transform_cyclonedx(data, source_sha256):
         "metadata_timestamp": metadata.get("timestamp"),
         "root_component_ref": root_ref,
         "source_sha256": source_sha256,
-        "retrieved_at": None,
+        "retrieved_at": retrieved_at,
     }]
     sbom_components = []
     for component_index, component in enumerate(components):
@@ -178,67 +124,126 @@ def transform_cyclonedx(data, source_sha256):
     }
 
 
-def process_source(record, state):
-    """Validate one supported raw snapshot and stage its checkpoint in memory."""
-    source_type = get_source_type(record)
-    if source_type not in ("osv", "cyclonedx"):
-        return None
-    source_sha256 = record.get("sha256")
-    if not source_sha256:
-        return None
-    source_key = f"{source_type}:{source_sha256}"
-    if source_key in state["processed"]:
-        print(f"Already processed: {source_key}")
-        return None
-    status_code = record.get("status_code")
-    if status_code is not None and not 200 <= int(status_code) < 300:
-        print(f"Skipping unsuccessful source: {source_key}")
-        return None
-    raw_path = get_raw_path(record)
-    if not raw_path.exists():
-        print(f"Raw file not found: {raw_path}")
-        return None
-    data = read_json(raw_path)
-    validate_raw_schema(data, source_type)
-    retrieved_at = record.get("retrieved_utc") or record.get("retrieved_at")
-    if source_type == "osv":
-        dfs = transform_osv(data, source_sha256, retrieved_at)
-    else:
-        dfs = transform_cyclonedx(data, source_sha256)
-        if not dfs["sboms"].empty:
-            dfs["sboms"].loc[0, "retrieved_at"] = retrieved_at
-    state["processed"].append(source_key)
-    print(f"Processed: {source_key}")
-    return dfs
+
+def matched_ids(data_dir, entry, request, demo=False):
+    """Verify exact request identity and pagination chain before extracting IDs."""
+    evidence = read_snapshot(data_dir, entry)
+    if demo:
+        return result_ids(evidence)
+    if evidence.get('kind') != 'batch_evidence' or evidence.get('request') != request:
+        raise ValueError('Query evidence identity mismatch')
+    pages = evidence.get('pages')
+    if not isinstance(pages, list) or not pages:
+        raise ValueError('Missing batch evidence pages')
+    ids, token = set(), None
+    for i, page in enumerate(pages):
+        if i and not token:
+            raise ValueError('Unexpected additional OSV page')
+        sent = read_snapshot(data_dir, page['request'])['queries']
+        received = read_snapshot(data_dir, page['response'])['results']
+        index = page['index']
+        if type(index) is not int or not 0 <= index < len(sent) or len(sent) != len(received):
+            raise ValueError('Batch index or cardinality mismatch')
+        expected = dict(request, page_token=token) if token else request
+        if sent[index] != expected:
+            raise ValueError('Stored POST request does not match component')
+        result = received[index]
+        ids |= result_ids(result)
+        token = result.get('next_page_token')
+    if token:
+        raise ValueError('Incomplete OSV pagination')
+    return ids
 
 
-def main():
-    """Return validated DataFrames and an uncommitted source checkpoint."""
+def main(data_dir=None, demo=False):
+    """Rebuild facts from all committed manifests and select latest query state."""
+    data_dir = Path(data_dir) if data_dir is not None else ROOT/'data'/ 'demo' if demo else ROOT/'data'
     contracts = read_schema_contracts(SQL_DIR)
-    state = load_state()
-    manifest_files = sorted(MANIFEST_DIR.glob("*.json"))
-    if not manifest_files:
-        print("No manifests found.")
-        return {}, state
-    collected = {}
-    for manifest_path in manifest_files:
-        for record in get_manifest_records(manifest_path):
-            dfs = process_source(record, state)
-            if not dfs:
-                continue
-            for table_name, df in dfs.items():
-                collected.setdefault(table_name, []).append(df)
-    result = {
-        table_name: pd.concat(frames, ignore_index=True)
-        for table_name, frames in collected.items() if frames
-    }
-    result = normalize_and_validate_dataframes(result, contracts)
-    print("\nSilver transformation and validation completed.")
-    return result, state
+    paths = sorted((data_dir/'metadata'/'runs').glob('*.json'))
+    if not paths:
+        raise ValueError(f'No run manifests in {data_dir}')
+    collected = {name: [] for name in KEYS}
+    inventories, latest = {}, {}
+    def collect(frames):
+        for table, frame in frames.items():
+            collected[table].append(frame)
+    for path in paths:
+        manifest = json.loads(path.read_text())
+        if not isinstance(manifest, dict) or manifest.get('format_version') != 3:
+            raise ValueError(f'Legacy/unsupported manifest: {path}; archive it outside runs and recapture')
+        if manifest.get('mode') != ('SYNTHETIC_OFFLINE' if demo else 'LIVE'):
+            raise ValueError(f'Wrong ingestion mode: {path}')
+        for entry in manifest['sboms']:
+            doc = read_snapshot(data_dir, entry)
+            root, refs = inventory(doc)
+            sha, app = entry['sha256'], entry['application_id']
+            if sha in inventories and inventories[sha][0] != (app, entry.get('provenance', {}).get('release_tag')):
+                raise ValueError('One identical SBOM cannot identify two applications in this schema')
+            inventories[sha] = ((app, entry.get('provenance', {}).get('release_tag')), root, refs)
+            frames = transform_cyclonedx(doc, sha, app, entry['retrieved_at'])
+            meta = entry.get('provenance', {})
+            if not demo:
+                if meta.get('sbom_sha256') != sha or meta.get('application_id') != app:
+                    raise ValueError('Inventory provenance mismatch')
+                if any(not meta.get(k) for k in ('release_tag','repository_url','git_commit','commit_at','java_version','maven_version','generator_version','generated_at')):
+                    raise ValueError('Incomplete live inventory provenance')
+            for field in ('release_tag','repository_url','git_commit','commit_at','java_version','maven_version','generator_version','generated_at'):
+                frames['sboms'][field] = meta.get(field)
+            collect(frames)
+        for entry in manifest['advisories']:
+            doc = read_snapshot(data_dir, entry)
+            validate_raw_schema(doc, 'osv')
+            collect(transform_osv(doc, entry['sha256'], entry['retrieved_at']))
+        for record in manifest['queries']:
+            sha, ref = record['sbom_sha256'], record['bom_ref']
+            _, root, refs = inventories[sha]
+            if ref == root or ref not in refs:
+                raise ValueError('Query refers to unknown or root component')
+            comp = refs[ref]
+            request = record['request']
+            if request != maven_request(comp):
+                raise ValueError('Query package/version does not match SBOM component')
+            status = record['status']
+            if status not in ('SUCCESS', 'FAILED', 'SKIPPED') or (status == 'SKIPPED') != (request is None):
+                raise ValueError('Invalid query status or identity')
+            entry = record.get('evidence')
+            if status == 'SUCCESS' and not entry:
+                raise ValueError('Successful query has no evidence')
+            if status != 'SUCCESS' and entry:
+                read_snapshot(data_dir, entry)  # verify partial evidence without promoting matches
+            ids = matched_ids(data_dir, entry, request, demo) if status == 'SUCCESS' else set()
+            row = {'source_sha256': sha, 'bom_ref': ref,
+                   'package_name': request['package']['name'] if request else None,
+                   'component_version': comp.get('version'),
+                   'osv_query_sha256': entry['sha256'] if entry else None,
+                   'raw_response_path': entry['path'] if entry else None,
+                   'queried_at': record['queried_at'], 'status': status,
+                   'ecosystem': request['package']['ecosystem'] if request else None,
+                   'error': record.get('error')}
+            timestamp = pd.to_datetime(row['queried_at'], utc=True, format='ISO8601').floor('us')
+            key = (sha, ref)
+            if key not in latest or timestamp >= latest[key][0]:
+                latest[key] = (timestamp, row, ids)
+    for _, row, ids in latest.values():
+        collected['component_queries'].append(pd.DataFrame([row]))
+        collected['component_findings'].append(pd.DataFrame([
+            {'source_sha256': row['source_sha256'], 'bom_ref': row['bom_ref'],
+             'vulnerability_id': osv_id, 'osv_query_sha256': row['osv_query_sha256']}
+            for osv_id in sorted(ids)]))
+    frames = {name: pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
+              for name, parts in collected.items()}
+    frames = normalize_and_validate_dataframes(frames, contracts)
+    for name, frame in frames.items():
+        # First seen for immutable facts; latest query was selected explicitly.
+        if 'retrieved_at' in frame.columns:
+            frame = frame.sort_values('retrieved_at', kind='stable')
+        frames[name] = frame.drop_duplicates(KEYS[name], keep='first').reset_index(drop=True)
+    return frames
 
 
-if __name__ == "__main__":
-    # Dry run: never commit a checkpoint from this entry point.
-    silver_dfs, _ = main()
-    for table_name, df in silver_dfs.items():
-        print(f"{table_name}: {len(df)} rows")
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--demo', action='store_true')
+    args = parser.parse_args()
+    for name, frame in main(demo=args.demo).items():
+        print(f'{name}: {len(frame)} rows')

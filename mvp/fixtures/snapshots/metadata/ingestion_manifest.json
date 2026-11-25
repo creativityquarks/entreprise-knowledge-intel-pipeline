@@ -1,0 +1,65 @@
+{
+  "format_version": 1,
+  "kind": "ingestion_manifest",
+  "mode": "SYNTHETIC_OFFLINE",
+  "osv_queries": [
+    {
+      "bom_ref": "helper",
+      "path": "raw/osv_queries/27436bf70a9f5a233eb9f58ae3da63331dde5fec47d6f0ecde9e5e3cde9977f0.json",
+      "queried_at": "2026-11-24T12:00:00+00:00",
+      "request": {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "com.example:billing-helper"
+        },
+        "version": "1.0.0"
+      },
+      "sbom_sha256": "274ec6af0de38a1b035e1b5d2eba5738f141599cd1987d03f39f4ead8e9df129",
+      "sha256": "27436bf70a9f5a233eb9f58ae3da63331dde5fec47d6f0ecde9e5e3cde9977f0",
+      "status": "SUCCESS"
+    },
+    {
+      "bom_ref": "log4j",
+      "path": "raw/osv_queries/020d6a51fc1b1137a96b508b4008d168d1a802743888d6fcd0d029962581c6f0.json",
+      "queried_at": "2026-11-24T12:00:00+00:00",
+      "request": {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "org.apache.logging.log4j:log4j-core"
+        },
+        "version": "2.14.1"
+      },
+      "sbom_sha256": "274ec6af0de38a1b035e1b5d2eba5738f141599cd1987d03f39f4ead8e9df129",
+      "sha256": "020d6a51fc1b1137a96b508b4008d168d1a802743888d6fcd0d029962581c6f0",
+      "status": "SUCCESS"
+    },
+    {
+      "bom_ref": "log4j",
+      "path": "raw/osv_queries/27436bf70a9f5a233eb9f58ae3da63331dde5fec47d6f0ecde9e5e3cde9977f0.json",
+      "queried_at": "2026-11-24T12:00:00+00:00",
+      "request": {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "org.apache.logging.log4j:log4j-core"
+        },
+        "version": "2.17.1"
+      },
+      "sbom_sha256": "dbdac1879d173e596f889458c7522eea32020afa63ae76654b0af72132590e3b",
+      "sha256": "27436bf70a9f5a233eb9f58ae3da63331dde5fec47d6f0ecde9e5e3cde9977f0",
+      "status": "SUCCESS"
+    }
+  ],
+  "retrieved_at": "2026-11-24T12:00:00+00:00",
+  "sboms": [
+    {
+      "application_id": "billing-prod",
+      "path": "raw/sboms/274ec6af0de38a1b035e1b5d2eba5738f141599cd1987d03f39f4ead8e9df129.json",
+      "sha256": "274ec6af0de38a1b035e1b5d2eba5738f141599cd1987d03f39f4ead8e9df129"
+    },
+    {
+      "application_id": "analytics-prod",
+      "path": "raw/sboms/dbdac1879d173e596f889458c7522eea32020afa63ae76654b0af72132590e3b.json",
+      "sha256": "dbdac1879d173e596f889458c7522eea32020afa63ae76654b0af72132590e3b"
+    }
+  ]
+}

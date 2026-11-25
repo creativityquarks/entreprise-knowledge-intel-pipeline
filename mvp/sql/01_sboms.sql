@@ -6,5 +6,13 @@ CREATE TABLE IF NOT EXISTS `{{PROJECT_ID}}.{{DATASET}}.sboms` (
   metadata_timestamp TIMESTAMP,
   root_component_ref STRING,
   source_sha256 STRING NOT NULL,
-  retrieved_at TIMESTAMP NOT NULL
+  retrieved_at TIMESTAMP NOT NULL,
+  release_tag STRING,
+  repository_url STRING,
+  git_commit STRING,
+  commit_at TIMESTAMP,
+  java_version STRING,
+  maven_version STRING,
+  generator_version STRING,
+  generated_at TIMESTAMP
 );

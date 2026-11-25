@@ -1,0 +1,1928 @@
+[0m02:04:09.053650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca80164080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca7fe6aba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca8071a1b0>]}
+
+
+============================== 02:04:09.059603 | 2a71bfa8-8363-47e1-9008-e3ab4ac965bc ==============================
+[0m02:04:09.059603 [info ] [MainThread]: Running with dbt=1.9.11
+[0m02:04:09.060350 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'introspect': 'True', 'no_print': 'None', 'target_path': 'None', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt build --project-dir /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold --profiles-dir /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/profiles --target demo', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'log_path': '/home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/logs', 'debug': 'False', 'fail_fast': 'False', 'quiet': 'False', 'partial_parse': 'True', 'profiles_dir': '/home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/profiles', 'printer_width': '80', 'cache_selected_only': 'False', 'use_experimental_parser': 'False'}
+[0m02:04:09.060871 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m02:04:09.061367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca804a08c0>]}
+[0m02:04:12.041841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca7fc5f380>]}
+[0m02:04:12.127188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca8071a270>]}
+[0m02:04:12.128100 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m02:04:12.438928 [debug] [MainThread]: checksum: 690fbff8a5dd1ab363cf413af60ca27848f42e2cae7211ee2c7aef41565a810a, vars: {}, profile: , target: demo, version: 1.9.11
+[0m02:04:12.439874 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:04:12.440392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca60c23080>]}
+[0m02:04:14.588885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca5fff8140>]}
+[0m02:04:14.721274 [debug] [MainThread]: Wrote artifact WritableManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/manifest.json
+[0m02:04:14.723902 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/semantic_manifest.json
+[0m02:04:14.761009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca60031b80>]}
+[0m02:04:14.761738 [info ] [MainThread]: Found 6 models, 17 data tests, 9 sources, 536 macros
+[0m02:04:14.766032 [info ] [MainThread]: 
+[0m02:04:14.766655 [info ] [MainThread]: Concurrency: 2 threads (target='demo')
+[0m02:04:14.767175 [info ] [MainThread]: 
+[0m02:04:14.768024 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:04:14.774310 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_ent-knowledge-intel-pipeline'
+[0m02:04:14.775008 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:15.671471 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ent-knowledge-intel-pipeline, now list_ent-knowledge-intel-pipeline_gold_v4_demo)
+[0m02:04:15.672205 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:04:16.035933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca82128ad0>]}
+[0m02:04:16.036731 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:04:16.041940 [debug] [Thread-1 (]: Began running node test.knowledge_gold.query_bridge_integrity
+[0m02:04:16.042696 [debug] [Thread-2 (]: Began running node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:04:16.043419 [info ] [Thread-1 (]: 1 of 23 START test query_bridge_integrity ...................................... [RUN]
+[0m02:04:16.044308 [info ] [Thread-2 (]: 2 of 23 START test source_not_null_silver_sboms_source_sha256 .................. [RUN]
+[0m02:04:16.045221 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ent-knowledge-intel-pipeline_gold_v4_demo, now test.knowledge_gold.query_bridge_integrity)
+[0m02:04:16.046380 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e'
+[0m02:04:16.047126 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.query_bridge_integrity
+[0m02:04:16.047810 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:04:16.064193 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.query_bridge_integrity"
+[0m02:04:16.071520 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e"
+[0m02:04:16.072689 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.query_bridge_integrity
+[0m02:04:16.078685 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:04:16.136172 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.query_bridge_integrity"
+[0m02:04:16.139382 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e"
+[0m02:04:16.140933 [debug] [Thread-1 (]: On test.knowledge_gold.query_bridge_integrity: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.query_bridge_integrity"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT f.* FROM `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`component_findings` f
+LEFT JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`component_queries` q
+ON q.source_sha256=f.source_sha256 AND q.bom_ref=f.bom_ref
+AND q.osv_query_sha256=f.osv_query_sha256 AND q.status='SUCCESS'
+WHERE q.bom_ref IS NULL
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:16.141647 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:16.142903 [debug] [Thread-2 (]: On test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source_sha256
+from `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sboms`
+where source_sha256 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:16.144369 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:04:16.551665 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:e4234025-873f-4a3b-afb3-35fbb03e77ab&page=queryresults
+[0m02:04:16.562154 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:d94b3b27-607b-459b-b634-b0939fd1940e&page=queryresults
+[0m02:04:16.945529 [info ] [Thread-1 (]: 1 of 23 PASS query_bridge_integrity ............................................ [[32mPASS[0m in 0.90s]
+[0m02:04:16.946648 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.query_bridge_integrity
+[0m02:04:16.947271 [debug] [Thread-1 (]: Began running node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:04:16.948026 [info ] [Thread-1 (]: 3 of 23 START test source_unique_silver_sboms_source_sha256 .................... [RUN]
+[0m02:04:16.949130 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.query_bridge_integrity, now test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52)
+[0m02:04:16.949785 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:04:16.959313 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52"
+[0m02:04:16.961091 [info ] [Thread-2 (]: 2 of 23 PASS source_not_null_silver_sboms_source_sha256 ........................ [[32mPASS[0m in 0.91s]
+[0m02:04:16.962143 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:04:16.962873 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:04:16.966239 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52"
+[0m02:04:16.966986 [debug] [Thread-1 (]: On test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select source_sha256 as unique_field
+  from `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sboms`
+  where source_sha256 is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:16.967582 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:17.330065 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:29ecf492-d0e9-4906-9e0e-2ff16b58534d&page=queryresults
+[0m02:04:17.662658 [info ] [Thread-1 (]: 3 of 23 PASS source_unique_silver_sboms_source_sha256 .......................... [[32mPASS[0m in 0.71s]
+[0m02:04:17.663757 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:04:17.665025 [debug] [Thread-2 (]: Began running node model.knowledge_gold.int_current_sboms
+[0m02:04:17.665723 [info ] [Thread-2 (]: 4 of 23 START sql table model gold_v4_demo.int_current_sboms ................... [RUN]
+[0m02:04:17.666399 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e, now model.knowledge_gold.int_current_sboms)
+[0m02:04:17.666908 [debug] [Thread-2 (]: Began compiling node model.knowledge_gold.int_current_sboms
+[0m02:04:17.671227 [debug] [Thread-2 (]: Writing injected SQL for node "model.knowledge_gold.int_current_sboms"
+[0m02:04:17.672009 [debug] [Thread-2 (]: Began executing node model.knowledge_gold.int_current_sboms
+[0m02:04:17.721958 [debug] [Thread-2 (]: Writing runtime sql for node "model.knowledge_gold.int_current_sboms"
+[0m02:04:17.722984 [debug] [Thread-2 (]: On model.knowledge_gold.int_current_sboms: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "model.knowledge_gold.int_current_sboms"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Latest inventory per application AND release; retain all historical releases.
+WITH ranked AS (
+ SELECT *, ROW_NUMBER() OVER (
+   PARTITION BY sbom_id, COALESCE(release_tag, 'fixture')
+   ORDER BY COALESCE(generated_at, retrieved_at) DESC, source_sha256 DESC
+ ) AS rn
+ FROM `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sboms`
+)
+SELECT sbom_id AS application_id, source_sha256 AS sbom_sha256,
+       root_component_ref, retrieved_at AS inventory_first_seen,
+       COALESCE(release_tag,'fixture') AS release_tag,
+       repository_url, git_commit, commit_at, generated_at
+FROM ranked WHERE rn = 1
+    );
+  
+[0m02:04:17.723600 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:18.397645 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:58c417ab-fa96-4ac9-8d81-65e7c4074f49&page=queryresults
+[0m02:04:19.667857 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca808988f0>]}
+[0m02:04:19.668838 [info ] [Thread-2 (]: 4 of 23 OK created sql table model gold_v4_demo.int_current_sboms .............. [[32mCREATE TABLE (2.0 rows, 190.0 Bytes processed)[0m in 2.00s]
+[0m02:04:19.669831 [debug] [Thread-2 (]: Finished running node model.knowledge_gold.int_current_sboms
+[0m02:04:19.671268 [debug] [Thread-1 (]: Began running node model.knowledge_gold.int_component_paths
+[0m02:04:19.672211 [info ] [Thread-1 (]: 5 of 23 START sql table model gold_v4_demo.int_component_paths ................. [RUN]
+[0m02:04:19.672988 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52, now model.knowledge_gold.int_component_paths)
+[0m02:04:19.673568 [debug] [Thread-1 (]: Began compiling node model.knowledge_gold.int_component_paths
+[0m02:04:19.678251 [debug] [Thread-1 (]: Writing injected SQL for node "model.knowledge_gold.int_component_paths"
+[0m02:04:19.679009 [debug] [Thread-1 (]: Began executing node model.knowledge_gold.int_component_paths
+[0m02:04:19.682524 [debug] [Thread-1 (]: Writing runtime sql for node "model.knowledge_gold.int_component_paths"
+[0m02:04:19.683250 [debug] [Thread-1 (]: On model.knowledge_gold.int_component_paths: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "model.knowledge_gold.int_component_paths"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_component_paths`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Breadth-first shortest paths computed in Python; no recursive path explosion.
+SELECT p.sbom_sha256, p.bom_ref, p.path_text, p.hops
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`component_paths` p
+JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s ON s.sbom_sha256=p.sbom_sha256
+    );
+  
+[0m02:04:19.683843 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:20.498382 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:0e3a96cb-8624-4728-9244-8c63450813b4&page=queryresults
+[0m02:04:22.067900 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca5cf552b0>]}
+[0m02:04:22.068871 [info ] [Thread-1 (]: 5 of 23 OK created sql table model gold_v4_demo.int_component_paths ............ [[32mCREATE TABLE (5.0 rows, 701.0 Bytes processed)[0m in 2.39s]
+[0m02:04:22.069768 [debug] [Thread-1 (]: Finished running node model.knowledge_gold.int_component_paths
+[0m02:04:22.070711 [debug] [Thread-2 (]: Began running node model.knowledge_gold.mart_application_findings
+[0m02:04:22.071602 [info ] [Thread-2 (]: 6 of 23 START sql table model gold_v4_demo.mart_application_findings ........... [RUN]
+[0m02:04:22.072293 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.int_current_sboms, now model.knowledge_gold.mart_application_findings)
+[0m02:04:22.072862 [debug] [Thread-2 (]: Began compiling node model.knowledge_gold.mart_application_findings
+[0m02:04:22.079265 [debug] [Thread-2 (]: Writing injected SQL for node "model.knowledge_gold.mart_application_findings"
+[0m02:04:22.080227 [debug] [Thread-2 (]: Began executing node model.knowledge_gold.mart_application_findings
+[0m02:04:22.084073 [debug] [Thread-2 (]: Writing runtime sql for node "model.knowledge_gold.mart_application_findings"
+[0m02:04:22.084939 [debug] [Thread-2 (]: On model.knowledge_gold.mart_application_findings: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "model.knowledge_gold.mart_application_findings"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_findings`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- OSV's exact-version matching is evidence of a known match, not exploitability.
+WITH latest_vulns AS (
+ SELECT *, ROW_NUMBER() OVER (PARTITION BY osv_id ORDER BY modified_at DESC,retrieved_at DESC,source_sha256 DESC) AS rn
+ FROM `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`vulnerabilities`
+)
+SELECT s.application_id,root.name AS application_name,
+       s.release_tag,s.git_commit,s.commit_at,
+       c.bom_ref,c.name AS component_name,
+       q.package_name,c.version AS component_version,
+       f.vulnerability_id,'KNOWN_VULNERABILITY' AS finding_status,
+       'UNRATED' AS severity_label,
+       'https://osv.dev/vulnerability/' || f.vulnerability_id AS advisory_url,
+       s.sbom_sha256,q.osv_query_sha256,
+       CAST(NULL AS STRING) AS sbom_gcs_uri,
+       s.inventory_first_seen,
+       CAST(NULL AS FLOAT64) AS v2_cvss_score,
+       v.published_at AS v2_published_at,
+       p.path_text AS v2_dependency_path,
+       v.summary AS v2_vulnerability_summary,
+       q.queried_at AS evaluated_at,
+       CASE WHEN v.osv_id IS NULL THEN 'PENDING' ELSE 'AVAILABLE' END AS advisory_enrichment,
+       CASE WHEN p.bom_ref IS NULL THEN 'PATH_UNKNOWN' ELSE 'PATH_AVAILABLE' END AS dependency_path_status,
+       v.source_sha256 AS advisory_sha256, v.modified_at AS advisory_modified_at,
+       v.retrieved_at AS advisory_retrieved_at
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` root
+ ON root.source_sha256=s.sbom_sha256 AND root.bom_ref=s.root_component_ref
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` c
+ ON c.source_sha256=s.sbom_sha256 AND NOT c.is_root
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`component_queries` q
+ ON q.source_sha256=c.source_sha256 AND q.bom_ref=c.bom_ref AND q.status='SUCCESS'
+ AND q.component_version=c.version
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`component_findings` f
+ ON f.source_sha256=q.source_sha256 AND f.bom_ref=q.bom_ref AND f.osv_query_sha256=q.osv_query_sha256
+LEFT JOIN latest_vulns v ON v.osv_id=f.vulnerability_id AND v.rn=1
+LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_component_paths` p
+ ON p.sbom_sha256=c.source_sha256 AND p.bom_ref=c.bom_ref
+    );
+  
+[0m02:04:22.085728 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:22.925554 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:33aaaecf-f069-4df3-99fd-336f81ad3628&page=queryresults
+[0m02:04:24.570553 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca5d136330>]}
+[0m02:04:24.571582 [info ] [Thread-2 (]: 6 of 23 OK created sql table model gold_v4_demo.mart_application_findings ...... [[32mCREATE TABLE (1.0 rows, 2.1 KiB processed)[0m in 2.50s]
+[0m02:04:24.572532 [debug] [Thread-2 (]: Finished running node model.knowledge_gold.mart_application_findings
+[0m02:04:24.573563 [debug] [Thread-1 (]: Began running node test.knowledge_gold.finding_grain
+[0m02:04:24.574215 [info ] [Thread-1 (]: 7 of 23 START test finding_grain ............................................... [RUN]
+[0m02:04:24.574877 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:04:24.575400 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.int_component_paths, now test.knowledge_gold.finding_grain)
+[0m02:04:24.576304 [info ] [Thread-2 (]: 8 of 23 START test not_null_mart_application_findings_vulnerability_id ......... [RUN]
+[0m02:04:24.577631 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.finding_grain
+[0m02:04:24.578560 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.mart_application_findings, now test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58)
+[0m02:04:24.582789 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.finding_grain"
+[0m02:04:24.583560 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:04:24.589807 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58"
+[0m02:04:24.590445 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.finding_grain
+[0m02:04:24.594468 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.finding_grain"
+[0m02:04:24.595186 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:04:24.598649 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58"
+[0m02:04:24.599360 [debug] [Thread-1 (]: On test.knowledge_gold.finding_grain: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.finding_grain"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT sbom_sha256,bom_ref,vulnerability_id,COUNT(*) AS n
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_findings`
+GROUP BY sbom_sha256,bom_ref,vulnerability_id HAVING COUNT(*)>1
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:24.600285 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:24.601527 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select vulnerability_id
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_findings`
+where vulnerability_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:24.602394 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:25.125509 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:02c566cc-2ee6-4e0a-a645-d11fa42987c2&page=queryresults
+[0m02:04:25.224573 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:8418d990-dbd2-4141-9690-3ed09dbb4d73&page=queryresults
+[0m02:04:25.428204 [info ] [Thread-2 (]: 8 of 23 PASS not_null_mart_application_findings_vulnerability_id ............... [[32mPASS[0m in 0.85s]
+[0m02:04:25.429288 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:04:25.566865 [info ] [Thread-1 (]: 7 of 23 PASS finding_grain ..................................................... [[32mPASS[0m in 0.99s]
+[0m02:04:25.567867 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.finding_grain
+[0m02:04:25.569023 [debug] [Thread-2 (]: Began running node model.knowledge_gold.graph_edges
+[0m02:04:25.569603 [debug] [Thread-1 (]: Began running node model.knowledge_gold.graph_nodes
+[0m02:04:25.570286 [info ] [Thread-2 (]: 9 of 23 START sql table model gold_v4_demo.graph_edges ......................... [RUN]
+[0m02:04:25.571133 [info ] [Thread-1 (]: 10 of 23 START sql table model gold_v4_demo.graph_nodes ........................ [RUN]
+[0m02:04:25.571901 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58, now model.knowledge_gold.graph_edges)
+[0m02:04:25.572495 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.finding_grain, now model.knowledge_gold.graph_nodes)
+[0m02:04:25.573094 [debug] [Thread-2 (]: Began compiling node model.knowledge_gold.graph_edges
+[0m02:04:25.573738 [debug] [Thread-1 (]: Began compiling node model.knowledge_gold.graph_nodes
+[0m02:04:25.579425 [debug] [Thread-2 (]: Writing injected SQL for node "model.knowledge_gold.graph_edges"
+[0m02:04:25.585319 [debug] [Thread-1 (]: Writing injected SQL for node "model.knowledge_gold.graph_nodes"
+[0m02:04:25.586368 [debug] [Thread-2 (]: Began executing node model.knowledge_gold.graph_edges
+[0m02:04:25.590427 [debug] [Thread-2 (]: Writing runtime sql for node "model.knowledge_gold.graph_edges"
+[0m02:04:25.591094 [debug] [Thread-1 (]: Began executing node model.knowledge_gold.graph_nodes
+[0m02:04:25.595389 [debug] [Thread-1 (]: Writing runtime sql for node "model.knowledge_gold.graph_nodes"
+[0m02:04:25.596202 [debug] [Thread-2 (]: On model.knowledge_gold.graph_edges: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "model.knowledge_gold.graph_edges"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_edges`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      SELECT 'app:' || s.sbom_sha256 AS source_id, 'HAS_INVENTORY' AS relation,
+       'component:' || s.sbom_sha256 || ':' || s.root_component_ref AS target_id,
+       s.sbom_sha256 AS sbom_sha256, CAST(NULL AS STRING) AS osv_query_sha256
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s
+UNION DISTINCT
+SELECT 'component:' || d.source_sha256 || ':' || d.parent_bom_ref,
+       'DEPENDS_ON', 'component:' || d.source_sha256 || ':' || d.child_bom_ref,
+       d.source_sha256, CAST(NULL AS STRING)
+FROM `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_dependencies` d
+JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s ON s.sbom_sha256=d.source_sha256
+UNION DISTINCT
+SELECT 'component:' || f.sbom_sha256 || ':' || f.bom_ref,
+       'AFFECTED_BY','vuln:' || f.vulnerability_id,
+       f.sbom_sha256, f.osv_query_sha256
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_findings` f
+    );
+  
+[0m02:04:25.596927 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:25.597564 [debug] [Thread-1 (]: On model.knowledge_gold.graph_nodes: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "model.knowledge_gold.graph_nodes"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_nodes`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Keep release-inventory node IDs separate; vulnerability IDs may be shared.
+SELECT 'app:' || s.sbom_sha256 AS node_id, 'Application' AS node_type,
+       root.name || ' [' || s.release_tag || ']' AS label, s.sbom_sha256 AS source_sha256
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` root
+ ON root.source_sha256=s.sbom_sha256 AND root.bom_ref=s.root_component_ref
+UNION DISTINCT
+SELECT 'component:' || c.source_sha256 || ':' || c.bom_ref,
+       'ComponentVersion', c.name || '@' || COALESCE(c.version,'unknown'), c.source_sha256
+FROM `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` c
+JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s ON s.sbom_sha256=c.source_sha256
+WHERE c.bom_ref IS NOT NULL
+UNION DISTINCT
+SELECT 'vuln:' || f.vulnerability_id, 'Vulnerability', f.vulnerability_id, CAST(NULL AS STRING)
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_findings` f
+    );
+  
+[0m02:04:25.598762 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:26.326100 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:5ea6a405-8777-4029-bab7-278d609ba2c7&page=queryresults
+[0m02:04:26.371904 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:a0b6e9de-8c3c-41a4-9eab-6d060fa408c9&page=queryresults
+[0m02:04:27.658517 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca5cf55160>]}
+[0m02:04:27.659469 [info ] [Thread-1 (]: 10 of 23 OK created sql table model gold_v4_demo.graph_nodes ................... [[32mCREATE TABLE (8.0 rows, 639.0 Bytes processed)[0m in 2.09s]
+[0m02:04:27.660371 [debug] [Thread-1 (]: Finished running node model.knowledge_gold.graph_nodes
+[0m02:04:27.660986 [debug] [Thread-1 (]: Began running node model.knowledge_gold.mart_application_overview
+[0m02:04:27.661646 [info ] [Thread-1 (]: 11 of 23 START sql table model gold_v4_demo.mart_application_overview .......... [RUN]
+[0m02:04:27.662294 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.graph_nodes, now model.knowledge_gold.mart_application_overview)
+[0m02:04:27.662939 [debug] [Thread-1 (]: Began compiling node model.knowledge_gold.mart_application_overview
+[0m02:04:27.669536 [debug] [Thread-1 (]: Writing injected SQL for node "model.knowledge_gold.mart_application_overview"
+[0m02:04:27.670359 [debug] [Thread-1 (]: Began executing node model.knowledge_gold.mart_application_overview
+[0m02:04:27.674105 [debug] [Thread-1 (]: Writing runtime sql for node "model.knowledge_gold.mart_application_overview"
+[0m02:04:27.674995 [debug] [Thread-1 (]: On model.knowledge_gold.mart_application_overview: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "model.knowledge_gold.mart_application_overview"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Counts are per release inventory, never pooled across different versions.
+WITH aggregated AS (
+ SELECT sbom_sha256, COUNT(*) AS finding_count,
+        COUNT(DISTINCT bom_ref) AS affected_components
+ FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_findings` GROUP BY sbom_sha256
+), path_coverage AS (
+ SELECT c.source_sha256 AS sbom_sha256, COUNT(p.bom_ref) AS components_with_path
+ FROM `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` c
+ LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_component_paths` p ON p.sbom_sha256=c.source_sha256 AND p.bom_ref=c.bom_ref
+ WHERE NOT c.is_root
+ GROUP BY c.source_sha256
+), coverage AS (
+ SELECT s.sbom_sha256,
+        COUNT(c.bom_ref) AS components_to_query,
+        SUM(CASE WHEN q.status='SUCCESS' AND q.component_version=c.version THEN 1 ELSE 0 END) AS components_queried,
+        SUM(CASE WHEN q.status='FAILED' THEN 1 ELSE 0 END) AS failed_queries,
+        SUM(CASE WHEN q.status='SKIPPED' THEN 1 ELSE 0 END) AS skipped_queries,
+        SUM(CASE WHEN c.bom_ref IS NOT NULL AND q.bom_ref IS NULL THEN 1 ELSE 0 END) AS missing_queries,
+        MIN(q.queried_at) AS first_evaluated_at, MAX(q.queried_at) AS last_evaluated_at
+ FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s
+ LEFT JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` c
+  ON c.source_sha256=s.sbom_sha256 AND NOT c.is_root
+ LEFT JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`component_queries` q
+  ON q.source_sha256=c.source_sha256 AND q.bom_ref=c.bom_ref
+ GROUP BY s.sbom_sha256
+)
+SELECT s.application_id, root.name AS application_name, s.release_tag,
+       s.git_commit,s.commit_at,s.repository_url,s.generated_at,
+       COALESCE(a.finding_count,0) AS finding_count,
+       COALESCE(a.affected_components,0) AS affected_components,
+       CASE WHEN co.components_to_query=0 OR co.components_queried < co.components_to_query THEN 'QUERY_INCOMPLETE'
+            WHEN COALESCE(a.finding_count,0)>0 THEN 'KNOWN_VULNERABILITY'
+            ELSE 'NO_MATCH_IN_QUERIED_OSV' END AS risk_flag,
+       CASE WHEN COALESCE(a.finding_count,0)>0 THEN 'UNRATED' WHEN co.components_to_query=0 OR co.components_queried < co.components_to_query THEN 'UNKNOWN' ELSE 'N/A' END AS severity_label,
+       s.sbom_sha256 AS inventory_snapshot_sha256,
+       co.components_to_query, co.components_queried,co.failed_queries,co.skipped_queries,co.missing_queries,
+       co.first_evaluated_at,co.last_evaluated_at,
+       COALESCE(pc.components_with_path,0) AS components_with_dependency_path,
+       co.components_to_query-COALESCE(pc.components_with_path,0) AS components_without_dependency_path
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`int_current_sboms` s
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4_demo`.`sbom_components` root
+ ON root.source_sha256=s.sbom_sha256 AND root.bom_ref=s.root_component_ref
+LEFT JOIN aggregated a ON a.sbom_sha256=s.sbom_sha256
+LEFT JOIN coverage co ON co.sbom_sha256=s.sbom_sha256
+
+LEFT JOIN path_coverage pc ON pc.sbom_sha256=s.sbom_sha256
+    );
+  
+[0m02:04:27.675693 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:27.681686 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca5cfac560>]}
+[0m02:04:27.682673 [info ] [Thread-2 (]: 9 of 23 OK created sql table model gold_v4_demo.graph_edges .................... [[32mCREATE TABLE (6.0 rows, 539.0 Bytes processed)[0m in 2.11s]
+[0m02:04:27.683818 [debug] [Thread-2 (]: Finished running node model.knowledge_gold.graph_edges
+[0m02:04:27.684471 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:04:27.685141 [info ] [Thread-2 (]: 12 of 23 START test not_null_graph_nodes_node_id ............................... [RUN]
+[0m02:04:27.685969 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.graph_edges, now test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d)
+[0m02:04:27.686542 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:04:27.692397 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d"
+[0m02:04:27.693108 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:04:27.696385 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d"
+[0m02:04:27.697133 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select node_id
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_nodes`
+where node_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:27.697713 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:28.181625 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:8d30ef8a-c373-4dae-bfa5-8ecefd30f7ff&page=queryresults
+[0m02:04:28.405519 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:137f77c3-297b-44e8-ba54-5e2babb93bab&page=queryresults
+[0m02:04:28.499189 [info ] [Thread-2 (]: 12 of 23 PASS not_null_graph_nodes_node_id ..................................... [[32mPASS[0m in 0.81s]
+[0m02:04:28.500264 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:04:28.500941 [debug] [Thread-2 (]: Began running node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:04:28.501614 [info ] [Thread-2 (]: 13 of 23 START test unique_graph_nodes_node_id ................................. [RUN]
+[0m02:04:28.502283 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d, now test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe)
+[0m02:04:28.502856 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:04:28.511288 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe"
+[0m02:04:28.512122 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:04:28.515337 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe"
+[0m02:04:28.516127 [debug] [Thread-2 (]: On test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select node_id as unique_field
+  from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_nodes`
+  where node_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:28.516704 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:28.885096 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:6f51a748-9b32-4287-a6e3-25b29528c525&page=queryresults
+[0m02:04:29.269260 [info ] [Thread-2 (]: 13 of 23 PASS unique_graph_nodes_node_id ....................................... [[32mPASS[0m in 0.77s]
+[0m02:04:29.270297 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:04:29.270897 [debug] [Thread-2 (]: Began running node test.knowledge_gold.graph_integrity
+[0m02:04:29.271601 [info ] [Thread-2 (]: 14 of 23 START test graph_integrity ............................................ [RUN]
+[0m02:04:29.272271 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe, now test.knowledge_gold.graph_integrity)
+[0m02:04:29.272779 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.graph_integrity
+[0m02:04:29.277393 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.graph_integrity"
+[0m02:04:29.278111 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.graph_integrity
+[0m02:04:29.281265 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.graph_integrity"
+[0m02:04:29.281978 [debug] [Thread-2 (]: On test.knowledge_gold.graph_integrity: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.graph_integrity"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT e.* FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_edges` e
+LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_nodes` s ON s.node_id=e.source_id
+LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_nodes` t ON t.node_id=e.target_id
+WHERE s.node_id IS NULL OR t.node_id IS NULL
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:29.282537 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:29.821344 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:9598efe7-6511-4f23-9c0b-ef979d09598b&page=queryresults
+[0m02:04:29.942395 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a71bfa8-8363-47e1-9008-e3ab4ac965bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca5d08f3e0>]}
+[0m02:04:29.943533 [info ] [Thread-1 (]: 11 of 23 OK created sql table model gold_v4_demo.mart_application_overview ..... [[32mCREATE TABLE (2.0 rows, 1.4 KiB processed)[0m in 2.28s]
+[0m02:04:29.944821 [debug] [Thread-1 (]: Finished running node model.knowledge_gold.mart_application_overview
+[0m02:04:29.945644 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:04:29.946338 [info ] [Thread-1 (]: 15 of 23 START test not_null_graph_edges_source_id ............................. [RUN]
+[0m02:04:29.947224 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.mart_application_overview, now test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742)
+[0m02:04:29.947800 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:04:29.953318 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742"
+[0m02:04:29.954020 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:04:29.957204 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742"
+[0m02:04:29.957915 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source_id
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_edges`
+where source_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:29.958496 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:30.132338 [info ] [Thread-2 (]: 14 of 23 PASS graph_integrity .................................................. [[32mPASS[0m in 0.86s]
+[0m02:04:30.133354 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.graph_integrity
+[0m02:04:30.133975 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:04:30.134636 [info ] [Thread-2 (]: 16 of 23 START test not_null_graph_edges_target_id ............................. [RUN]
+[0m02:04:30.135296 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.graph_integrity, now test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05)
+[0m02:04:30.135811 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:04:30.141731 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05"
+[0m02:04:30.142434 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:04:30.145673 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05"
+[0m02:04:30.146366 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select target_id
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`graph_edges`
+where target_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:30.146897 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:30.334243 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:32fef69b-31b8-4920-8f31-35fa1044cae8&page=queryresults
+[0m02:04:30.477549 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:06b4d8a8-9251-4e25-8fc3-73dfecaa405f&page=queryresults
+[0m02:04:30.668055 [info ] [Thread-1 (]: 15 of 23 PASS not_null_graph_edges_source_id ................................... [[32mPASS[0m in 0.72s]
+[0m02:04:30.669108 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:04:30.669715 [debug] [Thread-1 (]: Began running node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:04:30.670328 [info ] [Thread-1 (]: 17 of 23 START test accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV  [RUN]
+[0m02:04:30.671085 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742, now test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a)
+[0m02:04:30.671697 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:04:30.678052 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a"
+[0m02:04:30.681557 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:04:30.687493 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a"
+[0m02:04:30.688317 [debug] [Thread-1 (]: On test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        risk_flag as value_field,
+        count(*) as n_records
+
+    from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+    group by risk_flag
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'QUERY_INCOMPLETE','KNOWN_VULNERABILITY','NO_MATCH_IN_QUERIED_OSV'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:30.688958 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:30.771052 [info ] [Thread-2 (]: 16 of 23 PASS not_null_graph_edges_target_id ................................... [[32mPASS[0m in 0.64s]
+[0m02:04:30.772050 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:04:30.772641 [debug] [Thread-2 (]: Began running node test.knowledge_gold.coverage_never_false_clear
+[0m02:04:30.773253 [info ] [Thread-2 (]: 18 of 23 START test coverage_never_false_clear ................................. [RUN]
+[0m02:04:30.773899 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05, now test.knowledge_gold.coverage_never_false_clear)
+[0m02:04:30.774364 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.coverage_never_false_clear
+[0m02:04:30.778543 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.coverage_never_false_clear"
+[0m02:04:30.779279 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.coverage_never_false_clear
+[0m02:04:30.782678 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.coverage_never_false_clear"
+[0m02:04:30.783407 [debug] [Thread-2 (]: On test.knowledge_gold.coverage_never_false_clear: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.coverage_never_false_clear"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT * FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+WHERE components_queried > components_to_query
+   OR (risk_flag='NO_MATCH_IN_QUERIED_OSV' AND
+       (components_to_query=0 OR components_queried <> components_to_query OR finding_count <> 0))
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:30.784038 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:31.175697 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:31ffb8b2-5421-4233-85e0-75c31cd6e9eb&page=queryresults
+[0m02:04:31.298957 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:5df12385-9c73-45a6-ac1c-ff50ccb98eed&page=queryresults
+[0m02:04:31.531378 [info ] [Thread-1 (]: 17 of 23 PASS accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV  [[32mPASS[0m in 0.86s]
+[0m02:04:31.532666 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:04:31.533363 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:04:31.534051 [info ] [Thread-1 (]: 19 of 23 START test not_null_mart_application_overview_application_id .......... [RUN]
+[0m02:04:31.534818 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a, now test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5)
+[0m02:04:31.535356 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:04:31.542393 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5"
+[0m02:04:31.543324 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:04:31.546843 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5"
+[0m02:04:31.547651 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select application_id
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+where application_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:31.548264 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:31.653808 [info ] [Thread-2 (]: 18 of 23 PASS coverage_never_false_clear ....................................... [[32mPASS[0m in 0.88s]
+[0m02:04:31.654850 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.coverage_never_false_clear
+[0m02:04:31.655456 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:04:31.656210 [info ] [Thread-2 (]: 20 of 23 START test not_null_mart_application_overview_inventory_snapshot_sha256  [RUN]
+[0m02:04:31.656920 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.coverage_never_false_clear, now test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f)
+[0m02:04:31.657443 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:04:31.663314 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f"
+[0m02:04:31.664066 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:04:31.667199 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f"
+[0m02:04:31.667933 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select inventory_snapshot_sha256
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+where inventory_snapshot_sha256 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:31.668529 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:31.860758 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:0e550568-f96d-4fe7-bc8c-7b42eef8d975&page=queryresults
+[0m02:04:31.988310 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:c3597c00-f056-46ae-a1d7-bc142740171e&page=queryresults
+[0m02:04:32.206656 [info ] [Thread-1 (]: 19 of 23 PASS not_null_mart_application_overview_application_id ................ [[32mPASS[0m in 0.67s]
+[0m02:04:32.207689 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:04:32.208276 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:04:32.208985 [info ] [Thread-1 (]: 21 of 23 START test not_null_mart_application_overview_risk_flag ............... [RUN]
+[0m02:04:32.209678 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5, now test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea)
+[0m02:04:32.210200 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:04:32.216303 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea"
+[0m02:04:32.217110 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:04:32.220708 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea"
+[0m02:04:32.221464 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select risk_flag
+from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+where risk_flag is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:32.222062 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:32.413024 [info ] [Thread-2 (]: 20 of 23 PASS not_null_mart_application_overview_inventory_snapshot_sha256 ..... [[32mPASS[0m in 0.76s]
+[0m02:04:32.414208 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:04:32.414931 [debug] [Thread-2 (]: Began running node test.knowledge_gold.release_grain
+[0m02:04:32.415533 [info ] [Thread-2 (]: 22 of 23 START test release_grain .............................................. [RUN]
+[0m02:04:32.416341 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f, now test.knowledge_gold.release_grain)
+[0m02:04:32.416917 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.release_grain
+[0m02:04:32.421276 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.release_grain"
+[0m02:04:32.422114 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.release_grain
+[0m02:04:32.428466 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.release_grain"
+[0m02:04:32.429344 [debug] [Thread-2 (]: On test.knowledge_gold.release_grain: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.release_grain"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT application_id,release_tag,COUNT(*) AS n
+FROM `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+GROUP BY application_id,release_tag HAVING COUNT(*)>1
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:32.430001 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:32.526678 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:ab8f24d2-c62e-4544-abae-84c3891ed364&page=queryresults
+[0m02:04:32.719910 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:c22c4c2e-a0a9-4c88-8ff9-ade5bea79890&page=queryresults
+[0m02:04:32.804576 [info ] [Thread-1 (]: 21 of 23 PASS not_null_mart_application_overview_risk_flag ..................... [[32mPASS[0m in 0.59s]
+[0m02:04:32.805652 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:04:32.806261 [debug] [Thread-1 (]: Began running node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:04:32.806862 [info ] [Thread-1 (]: 23 of 23 START test unique_mart_application_overview_inventory_snapshot_sha256 . [RUN]
+[0m02:04:32.807547 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea, now test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1)
+[0m02:04:32.808074 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:04:32.813858 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1"
+[0m02:04:32.814594 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:04:32.817814 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1"
+[0m02:04:32.818626 [debug] [Thread-1 (]: On test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "demo", "node_id": "test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select inventory_snapshot_sha256 as unique_field
+  from `ent-knowledge-intel-pipeline`.`gold_v4_demo`.`mart_application_overview`
+  where inventory_snapshot_sha256 is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:04:32.819206 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:04:33.088581 [info ] [Thread-2 (]: 22 of 23 PASS release_grain .................................................... [[32mPASS[0m in 0.67s]
+[0m02:04:33.089666 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.release_grain
+[0m02:04:33.169036 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:54cf1980-a337-48c0-98dc-01114f84b278&page=queryresults
+[0m02:04:33.543874 [info ] [Thread-1 (]: 23 of 23 PASS unique_mart_application_overview_inventory_snapshot_sha256 ....... [[32mPASS[0m in 0.74s]
+[0m02:04:33.544963 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:04:33.547126 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:04:33.548258 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:04:33.548791 [debug] [MainThread]: Connection 'test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1' was properly closed.
+[0m02:04:33.549233 [debug] [MainThread]: Connection 'test.knowledge_gold.release_grain' was properly closed.
+[0m02:04:33.549917 [info ] [MainThread]: 
+[0m02:04:33.550449 [info ] [MainThread]: Finished running 6 table models, 17 data tests in 0 hours 0 minutes and 18.78 seconds (18.78s).
+[0m02:04:33.555839 [debug] [MainThread]: Command end result
+[0m02:04:33.588853 [debug] [MainThread]: Wrote artifact WritableManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/manifest.json
+[0m02:04:33.591654 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/semantic_manifest.json
+[0m02:04:33.599773 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/run_results.json
+[0m02:04:33.600248 [info ] [MainThread]: 
+[0m02:04:33.600848 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:04:33.601347 [info ] [MainThread]: 
+[0m02:04:33.601890 [info ] [MainThread]: Done. PASS=23 WARN=0 ERROR=0 SKIP=0 TOTAL=23
+[0m02:04:33.602750 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 24.61915, "process_in_blocks": "160", "process_kernel_time": 0.729527, "process_mem_max_rss": "370948", "process_out_blocks": "4280", "process_user_time": 8.880377}
+[0m02:04:33.603595 [debug] [MainThread]: Command `dbt build` succeeded at 02:04:33.603442 after 24.62 seconds
+[0m02:04:33.604056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca804a08c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca80164080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dca60043560>]}
+[0m02:04:33.604522 [debug] [MainThread]: Flushing usage events
+[0m02:04:34.043564 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:40:55.158888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707945029a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707944abd490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7079449ab230>]}
+
+
+============================== 02:40:55.171684 | 3c332fc4-5b75-4fb1-afc0-65946e9c2f52 ==============================
+[0m02:40:55.171684 [info ] [MainThread]: Running with dbt=1.9.11
+[0m02:40:55.172777 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'no_print': 'None', 'debug': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'profiles_dir': '/home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/profiles', 'use_colors': 'True', 'introspect': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'empty': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt build --project-dir /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold --profiles-dir /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/profiles --target live', 'version_check': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'printer_width': '80', 'log_path': '/home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/logs', 'static_parser': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False'}
+[0m02:40:55.173314 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m02:40:55.173903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707944fc4200>]}
+[0m02:41:00.470642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7079446b93d0>]}
+[0m02:41:00.563443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707925a2b950>]}
+[0m02:41:00.564372 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m02:41:00.908697 [debug] [MainThread]: checksum: 2c1f93b0b6c94c740ffb7ec71fb7078c8fbe0f9856dea61b864af13751fc90f6, vars: {}, profile: , target: live, version: 1.9.11
+[0m02:41:01.070967 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m02:41:01.071721 [debug] [MainThread]: previous checksum: 2c1f93b0b6c94c740ffb7ec71fb7078c8fbe0f9856dea61b864af13751fc90f6, current checksum: 690fbff8a5dd1ab363cf413af60ca27848f42e2cae7211ee2c7aef41565a810a
+[0m02:41:01.072151 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m02:41:01.072683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70792533e210>]}
+[0m02:41:03.297829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707946b58770>]}
+[0m02:41:03.426952 [debug] [MainThread]: Wrote artifact WritableManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/manifest.json
+[0m02:41:03.430944 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/semantic_manifest.json
+[0m02:41:03.503153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707946bb5f70>]}
+[0m02:41:03.503970 [info ] [MainThread]: Found 6 models, 17 data tests, 9 sources, 536 macros
+[0m02:41:03.508325 [info ] [MainThread]: 
+[0m02:41:03.508865 [info ] [MainThread]: Concurrency: 2 threads (target='live')
+[0m02:41:03.509388 [info ] [MainThread]: 
+[0m02:41:03.510116 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:41:03.515968 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_ent-knowledge-intel-pipeline'
+[0m02:41:03.516571 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:41:04.513418 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ent-knowledge-intel-pipeline, now list_ent-knowledge-intel-pipeline_gold_v4)
+[0m02:41:04.514333 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:41:04.826900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707924945c10>]}
+[0m02:41:04.827704 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:41:04.832661 [debug] [Thread-1 (]: Began running node test.knowledge_gold.query_bridge_integrity
+[0m02:41:04.833316 [debug] [Thread-2 (]: Began running node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:41:04.833938 [info ] [Thread-1 (]: 1 of 23 START test query_bridge_integrity ...................................... [RUN]
+[0m02:41:04.834713 [info ] [Thread-2 (]: 2 of 23 START test source_not_null_silver_sboms_source_sha256 .................. [RUN]
+[0m02:41:04.835458 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ent-knowledge-intel-pipeline_gold_v4, now test.knowledge_gold.query_bridge_integrity)
+[0m02:41:04.836472 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e'
+[0m02:41:04.837073 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.query_bridge_integrity
+[0m02:41:04.837641 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:41:04.847837 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.query_bridge_integrity"
+[0m02:41:04.860328 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e"
+[0m02:41:04.861799 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.query_bridge_integrity
+[0m02:41:04.868187 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:41:04.929959 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e"
+[0m02:41:04.933193 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.query_bridge_integrity"
+[0m02:41:04.934799 [debug] [Thread-2 (]: On test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source_sha256
+from `ent-knowledge-intel-pipeline`.`silver_v4`.`sboms`
+where source_sha256 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:04.935700 [debug] [Thread-1 (]: On test.knowledge_gold.query_bridge_integrity: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.query_bridge_integrity"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT f.* FROM `ent-knowledge-intel-pipeline`.`silver_v4`.`component_findings` f
+LEFT JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`component_queries` q
+ON q.source_sha256=f.source_sha256 AND q.bom_ref=f.bom_ref
+AND q.osv_query_sha256=f.osv_query_sha256 AND q.status='SUCCESS'
+WHERE q.bom_ref IS NULL
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:04.936643 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:41:04.937372 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:05.325526 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:58bd2c8e-556e-4481-8ab2-d754b0285e8a&page=queryresults
+[0m02:41:05.407275 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:b952cc08-e1fe-47a3-a5f5-346cb858cab7&page=queryresults
+[0m02:41:05.760737 [info ] [Thread-1 (]: 1 of 23 PASS query_bridge_integrity ............................................ [[32mPASS[0m in 0.92s]
+[0m02:41:05.761956 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.query_bridge_integrity
+[0m02:41:05.762730 [debug] [Thread-1 (]: Began running node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:41:05.763621 [info ] [Thread-1 (]: 3 of 23 START test source_unique_silver_sboms_source_sha256 .................... [RUN]
+[0m02:41:05.764340 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.query_bridge_integrity, now test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52)
+[0m02:41:05.765019 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:41:05.776965 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52"
+[0m02:41:05.780760 [info ] [Thread-2 (]: 2 of 23 PASS source_not_null_silver_sboms_source_sha256 ........................ [[32mPASS[0m in 0.94s]
+[0m02:41:05.782024 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e
+[0m02:41:05.783231 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:41:05.787811 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52"
+[0m02:41:05.788930 [debug] [Thread-1 (]: On test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select source_sha256 as unique_field
+  from `ent-knowledge-intel-pipeline`.`silver_v4`.`sboms`
+  where source_sha256 is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:05.789641 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:06.174646 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:46a1845b-177c-4262-b4ac-380e6e37a761&page=queryresults
+[0m02:41:06.536613 [info ] [Thread-1 (]: 3 of 23 PASS source_unique_silver_sboms_source_sha256 .......................... [[32mPASS[0m in 0.77s]
+[0m02:41:06.537724 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52
+[0m02:41:06.539434 [debug] [Thread-2 (]: Began running node model.knowledge_gold.int_current_sboms
+[0m02:41:06.540708 [info ] [Thread-2 (]: 4 of 23 START sql table model gold_v4.int_current_sboms ........................ [RUN]
+[0m02:41:06.541675 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.source_not_null_silver_sboms_source_sha256.b22ad1df2e, now model.knowledge_gold.int_current_sboms)
+[0m02:41:06.542255 [debug] [Thread-2 (]: Began compiling node model.knowledge_gold.int_current_sboms
+[0m02:41:06.547235 [debug] [Thread-2 (]: Writing injected SQL for node "model.knowledge_gold.int_current_sboms"
+[0m02:41:06.548158 [debug] [Thread-2 (]: Began executing node model.knowledge_gold.int_current_sboms
+[0m02:41:06.597574 [debug] [Thread-2 (]: Writing runtime sql for node "model.knowledge_gold.int_current_sboms"
+[0m02:41:06.598708 [debug] [Thread-2 (]: On model.knowledge_gold.int_current_sboms: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "model.knowledge_gold.int_current_sboms"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Latest inventory per application AND release; retain all historical releases.
+WITH ranked AS (
+ SELECT *, ROW_NUMBER() OVER (
+   PARTITION BY sbom_id, COALESCE(release_tag, 'fixture')
+   ORDER BY COALESCE(generated_at, retrieved_at) DESC, source_sha256 DESC
+ ) AS rn
+ FROM `ent-knowledge-intel-pipeline`.`silver_v4`.`sboms`
+)
+SELECT sbom_id AS application_id, source_sha256 AS sbom_sha256,
+       root_component_ref, retrieved_at AS inventory_first_seen,
+       COALESCE(release_tag,'fixture') AS release_tag,
+       repository_url, git_commit, commit_at, generated_at
+FROM ranked WHERE rn = 1
+    );
+  
+[0m02:41:06.599435 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:07.306027 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:9c876966-40d8-4088-8503-a6c0ee5747a2&page=queryresults
+[0m02:41:08.600634 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7079252e5eb0>]}
+[0m02:41:08.601918 [info ] [Thread-2 (]: 4 of 23 OK created sql table model gold_v4.int_current_sboms ................... [[32mCREATE TABLE (14.0 rows, 3.3 KiB processed)[0m in 2.06s]
+[0m02:41:08.602892 [debug] [Thread-2 (]: Finished running node model.knowledge_gold.int_current_sboms
+[0m02:41:08.604166 [debug] [Thread-1 (]: Began running node model.knowledge_gold.int_component_paths
+[0m02:41:08.604902 [info ] [Thread-1 (]: 5 of 23 START sql table model gold_v4.int_component_paths ...................... [RUN]
+[0m02:41:08.605644 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.source_unique_silver_sboms_source_sha256.de1ae3fd52, now model.knowledge_gold.int_component_paths)
+[0m02:41:08.606151 [debug] [Thread-1 (]: Began compiling node model.knowledge_gold.int_component_paths
+[0m02:41:08.610861 [debug] [Thread-1 (]: Writing injected SQL for node "model.knowledge_gold.int_component_paths"
+[0m02:41:08.611665 [debug] [Thread-1 (]: Began executing node model.knowledge_gold.int_component_paths
+[0m02:41:08.615267 [debug] [Thread-1 (]: Writing runtime sql for node "model.knowledge_gold.int_component_paths"
+[0m02:41:08.616081 [debug] [Thread-1 (]: On model.knowledge_gold.int_component_paths: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "model.knowledge_gold.int_component_paths"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4`.`int_component_paths`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Breadth-first shortest paths computed in Python; no recursive path explosion.
+SELECT p.sbom_sha256, p.bom_ref, p.path_text, p.hops
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`component_paths` p
+JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s ON s.sbom_sha256=p.sbom_sha256
+    );
+  
+[0m02:41:08.616719 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:09.512354 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:cb277b2e-85ed-4f4f-8266-63ace616b49e&page=queryresults
+[0m02:41:11.079725 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70791563a060>]}
+[0m02:41:11.080778 [info ] [Thread-1 (]: 5 of 23 OK created sql table model gold_v4.int_component_paths ................. [[32mCREATE TABLE (753.0 rows, 154.6 KiB processed)[0m in 2.47s]
+[0m02:41:11.081798 [debug] [Thread-1 (]: Finished running node model.knowledge_gold.int_component_paths
+[0m02:41:11.082819 [debug] [Thread-2 (]: Began running node model.knowledge_gold.mart_application_findings
+[0m02:41:11.083616 [info ] [Thread-2 (]: 6 of 23 START sql table model gold_v4.mart_application_findings ................ [RUN]
+[0m02:41:11.084924 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.int_current_sboms, now model.knowledge_gold.mart_application_findings)
+[0m02:41:11.085718 [debug] [Thread-2 (]: Began compiling node model.knowledge_gold.mart_application_findings
+[0m02:41:11.094827 [debug] [Thread-2 (]: Writing injected SQL for node "model.knowledge_gold.mart_application_findings"
+[0m02:41:11.095661 [debug] [Thread-2 (]: Began executing node model.knowledge_gold.mart_application_findings
+[0m02:41:11.099296 [debug] [Thread-2 (]: Writing runtime sql for node "model.knowledge_gold.mart_application_findings"
+[0m02:41:11.100159 [debug] [Thread-2 (]: On model.knowledge_gold.mart_application_findings: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "model.knowledge_gold.mart_application_findings"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_findings`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- OSV's exact-version matching is evidence of a known match, not exploitability.
+WITH latest_vulns AS (
+ SELECT *, ROW_NUMBER() OVER (PARTITION BY osv_id ORDER BY modified_at DESC,retrieved_at DESC,source_sha256 DESC) AS rn
+ FROM `ent-knowledge-intel-pipeline`.`silver_v4`.`vulnerabilities`
+)
+SELECT s.application_id,root.name AS application_name,
+       s.release_tag,s.git_commit,s.commit_at,
+       c.bom_ref,c.name AS component_name,
+       q.package_name,c.version AS component_version,
+       f.vulnerability_id,'KNOWN_VULNERABILITY' AS finding_status,
+       'UNRATED' AS severity_label,
+       'https://osv.dev/vulnerability/' || f.vulnerability_id AS advisory_url,
+       s.sbom_sha256,q.osv_query_sha256,
+       CAST(NULL AS STRING) AS sbom_gcs_uri,
+       s.inventory_first_seen,
+       CAST(NULL AS FLOAT64) AS v2_cvss_score,
+       v.published_at AS v2_published_at,
+       p.path_text AS v2_dependency_path,
+       v.summary AS v2_vulnerability_summary,
+       q.queried_at AS evaluated_at,
+       CASE WHEN v.osv_id IS NULL THEN 'PENDING' ELSE 'AVAILABLE' END AS advisory_enrichment,
+       CASE WHEN p.bom_ref IS NULL THEN 'PATH_UNKNOWN' ELSE 'PATH_AVAILABLE' END AS dependency_path_status,
+       v.source_sha256 AS advisory_sha256, v.modified_at AS advisory_modified_at,
+       v.retrieved_at AS advisory_retrieved_at
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` root
+ ON root.source_sha256=s.sbom_sha256 AND root.bom_ref=s.root_component_ref
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` c
+ ON c.source_sha256=s.sbom_sha256 AND NOT c.is_root
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`component_queries` q
+ ON q.source_sha256=c.source_sha256 AND q.bom_ref=c.bom_ref AND q.status='SUCCESS'
+ AND q.component_version=c.version
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`component_findings` f
+ ON f.source_sha256=q.source_sha256 AND f.bom_ref=q.bom_ref AND f.osv_query_sha256=q.osv_query_sha256
+LEFT JOIN latest_vulns v ON v.osv_id=f.vulnerability_id AND v.rn=1
+LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`int_component_paths` p
+ ON p.sbom_sha256=c.source_sha256 AND p.bom_ref=c.bom_ref
+    );
+  
+[0m02:41:11.100860 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:11.911574 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:b3d50b61-849e-4428-9969-870f379de7d1&page=queryresults
+[0m02:41:13.467768 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7079247ce5a0>]}
+[0m02:41:13.468839 [info ] [Thread-2 (]: 6 of 23 OK created sql table model gold_v4.mart_application_findings ........... [[32mCREATE TABLE (1.2k rows, 1.4 MiB processed)[0m in 2.38s]
+[0m02:41:13.469821 [debug] [Thread-2 (]: Finished running node model.knowledge_gold.mart_application_findings
+[0m02:41:13.471290 [debug] [Thread-1 (]: Began running node test.knowledge_gold.finding_grain
+[0m02:41:13.471910 [info ] [Thread-1 (]: 7 of 23 START test finding_grain ............................................... [RUN]
+[0m02:41:13.472747 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:41:13.473850 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.int_component_paths, now test.knowledge_gold.finding_grain)
+[0m02:41:13.474695 [info ] [Thread-2 (]: 8 of 23 START test not_null_mart_application_findings_vulnerability_id ......... [RUN]
+[0m02:41:13.475623 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.finding_grain
+[0m02:41:13.476592 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.mart_application_findings, now test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58)
+[0m02:41:13.482116 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.finding_grain"
+[0m02:41:13.483122 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:41:13.490332 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58"
+[0m02:41:13.491374 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.finding_grain
+[0m02:41:13.495837 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.finding_grain"
+[0m02:41:13.496694 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:41:13.501659 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58"
+[0m02:41:13.503022 [debug] [Thread-1 (]: On test.knowledge_gold.finding_grain: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.finding_grain"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT sbom_sha256,bom_ref,vulnerability_id,COUNT(*) AS n
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_findings`
+GROUP BY sbom_sha256,bom_ref,vulnerability_id HAVING COUNT(*)>1
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:13.504066 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select vulnerability_id
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_findings`
+where vulnerability_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:13.504917 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:13.505742 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:14.005166 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:3223b582-491a-4368-83a0-44de6dac9e8e&page=queryresults
+[0m02:41:14.106442 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:ba756089-2915-4f6e-96ba-2b77d4ffba8b&page=queryresults
+[0m02:41:14.288937 [info ] [Thread-1 (]: 7 of 23 PASS finding_grain ..................................................... [[32mPASS[0m in 0.82s]
+[0m02:41:14.290023 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.finding_grain
+[0m02:41:14.483553 [info ] [Thread-2 (]: 8 of 23 PASS not_null_mart_application_findings_vulnerability_id ............... [[32mPASS[0m in 1.01s]
+[0m02:41:14.484783 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58
+[0m02:41:14.486562 [debug] [Thread-1 (]: Began running node model.knowledge_gold.graph_edges
+[0m02:41:14.487601 [info ] [Thread-1 (]: 9 of 23 START sql table model gold_v4.graph_edges .............................. [RUN]
+[0m02:41:14.488652 [debug] [Thread-2 (]: Began running node model.knowledge_gold.graph_nodes
+[0m02:41:14.489645 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.finding_grain, now model.knowledge_gold.graph_edges)
+[0m02:41:14.490809 [info ] [Thread-2 (]: 10 of 23 START sql table model gold_v4.graph_nodes ............................. [RUN]
+[0m02:41:14.491789 [debug] [Thread-1 (]: Began compiling node model.knowledge_gold.graph_edges
+[0m02:41:14.492576 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_findings_vulnerability_id.f98b5a5e58, now model.knowledge_gold.graph_nodes)
+[0m02:41:14.498781 [debug] [Thread-1 (]: Writing injected SQL for node "model.knowledge_gold.graph_edges"
+[0m02:41:14.499370 [debug] [Thread-2 (]: Began compiling node model.knowledge_gold.graph_nodes
+[0m02:41:14.505102 [debug] [Thread-2 (]: Writing injected SQL for node "model.knowledge_gold.graph_nodes"
+[0m02:41:14.506225 [debug] [Thread-1 (]: Began executing node model.knowledge_gold.graph_edges
+[0m02:41:14.510810 [debug] [Thread-1 (]: Writing runtime sql for node "model.knowledge_gold.graph_edges"
+[0m02:41:14.511796 [debug] [Thread-2 (]: Began executing node model.knowledge_gold.graph_nodes
+[0m02:41:14.519223 [debug] [Thread-2 (]: Writing runtime sql for node "model.knowledge_gold.graph_nodes"
+[0m02:41:14.520039 [debug] [Thread-1 (]: On model.knowledge_gold.graph_edges: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "model.knowledge_gold.graph_edges"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_edges`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      SELECT 'app:' || s.sbom_sha256 AS source_id, 'HAS_INVENTORY' AS relation,
+       'component:' || s.sbom_sha256 || ':' || s.root_component_ref AS target_id,
+       s.sbom_sha256 AS sbom_sha256, CAST(NULL AS STRING) AS osv_query_sha256
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s
+UNION DISTINCT
+SELECT 'component:' || d.source_sha256 || ':' || d.parent_bom_ref,
+       'DEPENDS_ON', 'component:' || d.source_sha256 || ':' || d.child_bom_ref,
+       d.source_sha256, CAST(NULL AS STRING)
+FROM `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_dependencies` d
+JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s ON s.sbom_sha256=d.source_sha256
+UNION DISTINCT
+SELECT 'component:' || f.sbom_sha256 || ':' || f.bom_ref,
+       'AFFECTED_BY','vuln:' || f.vulnerability_id,
+       f.sbom_sha256, f.osv_query_sha256
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_findings` f
+    );
+  
+[0m02:41:14.521050 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:14.524088 [debug] [Thread-2 (]: On model.knowledge_gold.graph_nodes: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "model.knowledge_gold.graph_nodes"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_nodes`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Keep release-inventory node IDs separate; vulnerability IDs may be shared.
+SELECT 'app:' || s.sbom_sha256 AS node_id, 'Application' AS node_type,
+       root.name || ' [' || s.release_tag || ']' AS label, s.sbom_sha256 AS source_sha256
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` root
+ ON root.source_sha256=s.sbom_sha256 AND root.bom_ref=s.root_component_ref
+UNION DISTINCT
+SELECT 'component:' || c.source_sha256 || ':' || c.bom_ref,
+       'ComponentVersion', c.name || '@' || COALESCE(c.version,'unknown'), c.source_sha256
+FROM `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` c
+JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s ON s.sbom_sha256=c.source_sha256
+WHERE c.bom_ref IS NOT NULL
+UNION DISTINCT
+SELECT 'vuln:' || f.vulnerability_id, 'Vulnerability', f.vulnerability_id, CAST(NULL AS STRING)
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_findings` f
+    );
+  
+[0m02:41:14.525101 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:15.197640 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:d2ea987e-8069-45b8-8c66-a96fdcb4d7cd&page=queryresults
+[0m02:41:15.225880 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:9f1cad0e-3ad7-4dfb-88f7-b63c20de347d&page=queryresults
+[0m02:41:16.860292 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70791568a0c0>]}
+[0m02:41:16.861259 [info ] [Thread-1 (]: 9 of 23 OK created sql table model gold_v4.graph_edges ......................... [[32mCREATE TABLE (6.6k rows, 1.2 MiB processed)[0m in 2.37s]
+[0m02:41:16.862116 [debug] [Thread-1 (]: Finished running node model.knowledge_gold.graph_edges
+[0m02:41:16.862689 [debug] [Thread-1 (]: Began running node model.knowledge_gold.mart_application_overview
+[0m02:41:16.863311 [info ] [Thread-1 (]: 11 of 23 START sql table model gold_v4.mart_application_overview ............... [RUN]
+[0m02:41:16.864002 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.graph_edges, now model.knowledge_gold.mart_application_overview)
+[0m02:41:16.865017 [debug] [Thread-1 (]: Began compiling node model.knowledge_gold.mart_application_overview
+[0m02:41:16.872803 [debug] [Thread-1 (]: Writing injected SQL for node "model.knowledge_gold.mart_application_overview"
+[0m02:41:16.873766 [debug] [Thread-1 (]: Began executing node model.knowledge_gold.mart_application_overview
+[0m02:41:16.877707 [debug] [Thread-1 (]: Writing runtime sql for node "model.knowledge_gold.mart_application_overview"
+[0m02:41:16.878683 [debug] [Thread-1 (]: On model.knowledge_gold.mart_application_overview: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "model.knowledge_gold.mart_application_overview"} */
+
+  
+    
+
+    create or replace table `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Counts are per release inventory, never pooled across different versions.
+WITH aggregated AS (
+ SELECT sbom_sha256, COUNT(*) AS finding_count,
+        COUNT(DISTINCT bom_ref) AS affected_components
+ FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_findings` GROUP BY sbom_sha256
+), path_coverage AS (
+ SELECT c.source_sha256 AS sbom_sha256, COUNT(p.bom_ref) AS components_with_path
+ FROM `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` c
+ LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`int_component_paths` p ON p.sbom_sha256=c.source_sha256 AND p.bom_ref=c.bom_ref
+ WHERE NOT c.is_root
+ GROUP BY c.source_sha256
+), coverage AS (
+ SELECT s.sbom_sha256,
+        COUNT(c.bom_ref) AS components_to_query,
+        SUM(CASE WHEN q.status='SUCCESS' AND q.component_version=c.version THEN 1 ELSE 0 END) AS components_queried,
+        SUM(CASE WHEN q.status='FAILED' THEN 1 ELSE 0 END) AS failed_queries,
+        SUM(CASE WHEN q.status='SKIPPED' THEN 1 ELSE 0 END) AS skipped_queries,
+        SUM(CASE WHEN c.bom_ref IS NOT NULL AND q.bom_ref IS NULL THEN 1 ELSE 0 END) AS missing_queries,
+        MIN(q.queried_at) AS first_evaluated_at, MAX(q.queried_at) AS last_evaluated_at
+ FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s
+ LEFT JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` c
+  ON c.source_sha256=s.sbom_sha256 AND NOT c.is_root
+ LEFT JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`component_queries` q
+  ON q.source_sha256=c.source_sha256 AND q.bom_ref=c.bom_ref
+ GROUP BY s.sbom_sha256
+)
+SELECT s.application_id, root.name AS application_name, s.release_tag,
+       s.git_commit,s.commit_at,s.repository_url,s.generated_at,
+       COALESCE(a.finding_count,0) AS finding_count,
+       COALESCE(a.affected_components,0) AS affected_components,
+       CASE WHEN co.components_to_query=0 OR co.components_queried < co.components_to_query THEN 'QUERY_INCOMPLETE'
+            WHEN COALESCE(a.finding_count,0)>0 THEN 'KNOWN_VULNERABILITY'
+            ELSE 'NO_MATCH_IN_QUERIED_OSV' END AS risk_flag,
+       CASE WHEN COALESCE(a.finding_count,0)>0 THEN 'UNRATED' WHEN co.components_to_query=0 OR co.components_queried < co.components_to_query THEN 'UNKNOWN' ELSE 'N/A' END AS severity_label,
+       s.sbom_sha256 AS inventory_snapshot_sha256,
+       co.components_to_query, co.components_queried,co.failed_queries,co.skipped_queries,co.missing_queries,
+       co.first_evaluated_at,co.last_evaluated_at,
+       COALESCE(pc.components_with_path,0) AS components_with_dependency_path,
+       co.components_to_query-COALESCE(pc.components_with_path,0) AS components_without_dependency_path
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`int_current_sboms` s
+JOIN `ent-knowledge-intel-pipeline`.`silver_v4`.`sbom_components` root
+ ON root.source_sha256=s.sbom_sha256 AND root.bom_ref=s.root_component_ref
+LEFT JOIN aggregated a ON a.sbom_sha256=s.sbom_sha256
+LEFT JOIN coverage co ON co.sbom_sha256=s.sbom_sha256
+
+LEFT JOIN path_coverage pc ON pc.sbom_sha256=s.sbom_sha256
+    );
+  
+[0m02:41:16.879412 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:17.591659 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:8f8cfbe7-206f-48d6-9a5d-4ba1325d090b&page=queryresults
+[0m02:41:18.767246 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707915688cb0>]}
+[0m02:41:18.768402 [info ] [Thread-2 (]: 10 of 23 OK created sql table model gold_v4.graph_nodes ........................ [[32mCREATE TABLE (2.8k rows, 379.6 KiB processed)[0m in 4.27s]
+[0m02:41:18.769372 [debug] [Thread-2 (]: Finished running node model.knowledge_gold.graph_nodes
+[0m02:41:18.770030 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:41:18.770616 [info ] [Thread-2 (]: 12 of 23 START test not_null_graph_edges_source_id ............................. [RUN]
+[0m02:41:18.771552 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.graph_nodes, now test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742)
+[0m02:41:18.772394 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:41:18.778474 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742"
+[0m02:41:18.779324 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:41:18.782791 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742"
+[0m02:41:18.783646 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source_id
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_edges`
+where source_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:18.784239 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:19.312937 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:1e27f275-e4b6-4d11-aafd-9a3fa1b160e5&page=queryresults
+[0m02:41:19.368359 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c332fc4-5b75-4fb1-afc0-65946e9c2f52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7079248a51c0>]}
+[0m02:41:19.369394 [info ] [Thread-1 (]: 11 of 23 OK created sql table model gold_v4.mart_application_overview .......... [[32mCREATE TABLE (14.0 rows, 950.3 KiB processed)[0m in 2.50s]
+[0m02:41:19.370390 [debug] [Thread-1 (]: Finished running node model.knowledge_gold.mart_application_overview
+[0m02:41:19.371026 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:41:19.371699 [info ] [Thread-1 (]: 13 of 23 START test not_null_graph_edges_target_id ............................. [RUN]
+[0m02:41:19.372675 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.knowledge_gold.mart_application_overview, now test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05)
+[0m02:41:19.373239 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:41:19.379265 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05"
+[0m02:41:19.380036 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:41:19.383358 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05"
+[0m02:41:19.384097 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select target_id
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_edges`
+where target_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:19.384627 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:19.641031 [info ] [Thread-2 (]: 12 of 23 PASS not_null_graph_edges_source_id ................................... [[32mPASS[0m in 0.87s]
+[0m02:41:19.642425 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742
+[0m02:41:19.643255 [debug] [Thread-2 (]: Began running node test.knowledge_gold.graph_integrity
+[0m02:41:19.644108 [info ] [Thread-2 (]: 14 of 23 START test graph_integrity ............................................ [RUN]
+[0m02:41:19.644803 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_graph_edges_source_id.b5ace56742, now test.knowledge_gold.graph_integrity)
+[0m02:41:19.645338 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.graph_integrity
+[0m02:41:19.650070 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.graph_integrity"
+[0m02:41:19.650872 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.graph_integrity
+[0m02:41:19.656967 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.graph_integrity"
+[0m02:41:19.657885 [debug] [Thread-2 (]: On test.knowledge_gold.graph_integrity: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.graph_integrity"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT e.* FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_edges` e
+LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_nodes` s ON s.node_id=e.source_id
+LEFT JOIN `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_nodes` t ON t.node_id=e.target_id
+WHERE s.node_id IS NULL OR t.node_id IS NULL
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:19.658550 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:19.700900 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:0fb706e8-14b1-478b-97ee-ae9e43b8e9b4&page=queryresults
+[0m02:41:20.101755 [info ] [Thread-1 (]: 13 of 23 PASS not_null_graph_edges_target_id ................................... [[32mPASS[0m in 0.73s]
+[0m02:41:20.102892 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05
+[0m02:41:20.103520 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:41:20.104146 [info ] [Thread-1 (]: 15 of 23 START test not_null_graph_nodes_node_id ............................... [RUN]
+[0m02:41:20.104843 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_graph_edges_target_id.e96d655a05, now test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d)
+[0m02:41:20.105329 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:41:20.111471 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d"
+[0m02:41:20.112293 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:41:20.115726 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d"
+[0m02:41:20.116472 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select node_id
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_nodes`
+where node_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:20.117007 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:20.237074 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:bec85aa4-805d-4d7c-9b80-6b627ee4af56&page=queryresults
+[0m02:41:20.437830 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:aa010039-d943-4294-870c-1aeae54eb825&page=queryresults
+[0m02:41:20.619766 [info ] [Thread-2 (]: 14 of 23 PASS graph_integrity .................................................. [[32mPASS[0m in 0.97s]
+[0m02:41:20.620836 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.graph_integrity
+[0m02:41:20.621466 [debug] [Thread-2 (]: Began running node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:41:20.622199 [info ] [Thread-2 (]: 16 of 23 START test unique_graph_nodes_node_id ................................. [RUN]
+[0m02:41:20.622919 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.graph_integrity, now test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe)
+[0m02:41:20.623526 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:41:20.629801 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe"
+[0m02:41:20.630712 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:41:20.634380 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe"
+[0m02:41:20.635288 [debug] [Thread-2 (]: On test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select node_id as unique_field
+  from `ent-knowledge-intel-pipeline`.`gold_v4`.`graph_nodes`
+  where node_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:20.635984 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:20.810597 [info ] [Thread-1 (]: 15 of 23 PASS not_null_graph_nodes_node_id ..................................... [[32mPASS[0m in 0.71s]
+[0m02:41:20.811660 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d
+[0m02:41:20.812304 [debug] [Thread-1 (]: Began running node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:41:20.813032 [info ] [Thread-1 (]: 17 of 23 START test accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV  [RUN]
+[0m02:41:20.814385 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_graph_nodes_node_id.81a0e51d0d, now test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a)
+[0m02:41:20.815190 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:41:20.822132 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a"
+[0m02:41:20.822973 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:41:20.826420 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a"
+[0m02:41:20.827262 [debug] [Thread-1 (]: On test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        risk_flag as value_field,
+        count(*) as n_records
+
+    from `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+    group by risk_flag
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'QUERY_INCOMPLETE','KNOWN_VULNERABILITY','NO_MATCH_IN_QUERIED_OSV'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:20.827891 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:20.977335 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:a28b5b0b-68e1-4e7f-84a6-100d95afe16a&page=queryresults
+[0m02:41:21.344612 [info ] [Thread-2 (]: 16 of 23 PASS unique_graph_nodes_node_id ....................................... [[32mPASS[0m in 0.72s]
+[0m02:41:21.345807 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe
+[0m02:41:21.346468 [debug] [Thread-2 (]: Began running node test.knowledge_gold.coverage_never_false_clear
+[0m02:41:21.347118 [info ] [Thread-2 (]: 18 of 23 START test coverage_never_false_clear ................................. [RUN]
+[0m02:41:21.348035 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.unique_graph_nodes_node_id.0fe80efafe, now test.knowledge_gold.coverage_never_false_clear)
+[0m02:41:21.348621 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.coverage_never_false_clear
+[0m02:41:21.352885 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.coverage_never_false_clear"
+[0m02:41:21.353714 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.coverage_never_false_clear
+[0m02:41:21.357088 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.coverage_never_false_clear"
+[0m02:41:21.357898 [debug] [Thread-2 (]: On test.knowledge_gold.coverage_never_false_clear: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.coverage_never_false_clear"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT * FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+WHERE components_queried > components_to_query
+   OR (risk_flag='NO_MATCH_IN_QUERIED_OSV' AND
+       (components_to_query=0 OR components_queried <> components_to_query OR finding_count <> 0))
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:21.358560 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:21.374668 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:c1eee820-89d2-4024-904d-a434321eda24&page=queryresults
+[0m02:41:21.624827 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:c96c628f-ed71-4b27-9c38-17c51c3326bc&page=queryresults
+[0m02:41:21.637535 [info ] [Thread-1 (]: 17 of 23 PASS accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV  [[32mPASS[0m in 0.82s]
+[0m02:41:21.638714 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a
+[0m02:41:21.639356 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:41:21.640052 [info ] [Thread-1 (]: 19 of 23 START test not_null_mart_application_overview_application_id .......... [RUN]
+[0m02:41:21.640793 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.accepted_values_mart_application_overview_risk_flag__QUERY_INCOMPLETE__KNOWN_VULNERABILITY__NO_MATCH_IN_QUERIED_OSV.b2bc53022a, now test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5)
+[0m02:41:21.641298 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:41:21.647357 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5"
+[0m02:41:21.648158 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:41:21.654192 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5"
+[0m02:41:21.655004 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select application_id
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+where application_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:21.655600 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:21.927326 [info ] [Thread-2 (]: 18 of 23 PASS coverage_never_false_clear ....................................... [[32mPASS[0m in 0.58s]
+[0m02:41:21.928419 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.coverage_never_false_clear
+[0m02:41:21.929127 [debug] [Thread-2 (]: Began running node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:41:21.929777 [info ] [Thread-2 (]: 20 of 23 START test not_null_mart_application_overview_inventory_snapshot_sha256  [RUN]
+[0m02:41:21.930422 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.coverage_never_false_clear, now test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f)
+[0m02:41:21.931024 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:41:21.937424 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f"
+[0m02:41:21.938341 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:41:21.941909 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f"
+[0m02:41:21.943334 [debug] [Thread-2 (]: On test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select inventory_snapshot_sha256
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+where inventory_snapshot_sha256 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:21.944283 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:21.983878 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:363a124a-dda8-4830-b545-fcc3f135fbb2&page=queryresults
+[0m02:41:22.234975 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:d98497fc-0a22-4334-b907-bbebc05dd135&page=queryresults
+[0m02:41:22.256353 [info ] [Thread-1 (]: 19 of 23 PASS not_null_mart_application_overview_application_id ................ [[32mPASS[0m in 0.62s]
+[0m02:41:22.257447 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5
+[0m02:41:22.258120 [debug] [Thread-1 (]: Began running node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:41:22.259013 [info ] [Thread-1 (]: 21 of 23 START test not_null_mart_application_overview_risk_flag ............... [RUN]
+[0m02:41:22.260063 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_overview_application_id.ab0d42a1d5, now test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea)
+[0m02:41:22.260774 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:41:22.267553 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea"
+[0m02:41:22.268439 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:41:22.272056 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea"
+[0m02:41:22.272949 [debug] [Thread-1 (]: On test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select risk_flag
+from `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+where risk_flag is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:22.273609 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:22.523315 [info ] [Thread-2 (]: 20 of 23 PASS not_null_mart_application_overview_inventory_snapshot_sha256 ..... [[32mPASS[0m in 0.59s]
+[0m02:41:22.524411 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f
+[0m02:41:22.525119 [debug] [Thread-2 (]: Began running node test.knowledge_gold.release_grain
+[0m02:41:22.525714 [info ] [Thread-2 (]: 22 of 23 START test release_grain .............................................. [RUN]
+[0m02:41:22.526473 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_overview_inventory_snapshot_sha256.0dcf49301f, now test.knowledge_gold.release_grain)
+[0m02:41:22.527064 [debug] [Thread-2 (]: Began compiling node test.knowledge_gold.release_grain
+[0m02:41:22.531448 [debug] [Thread-2 (]: Writing injected SQL for node "test.knowledge_gold.release_grain"
+[0m02:41:22.532323 [debug] [Thread-2 (]: Began executing node test.knowledge_gold.release_grain
+[0m02:41:22.535973 [debug] [Thread-2 (]: Writing runtime sql for node "test.knowledge_gold.release_grain"
+[0m02:41:22.536865 [debug] [Thread-2 (]: On test.knowledge_gold.release_grain: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.release_grain"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  SELECT application_id,release_tag,COUNT(*) AS n
+FROM `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+GROUP BY application_id,release_tag HAVING COUNT(*)>1
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:22.537576 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:41:22.666830 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:3ac72008-8614-4b44-9935-2b8338f80dd9&page=queryresults
+[0m02:41:22.827278 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:25cf2519-8e03-467a-b364-2f05894de6fa&page=queryresults
+[0m02:41:23.013397 [info ] [Thread-1 (]: 21 of 23 PASS not_null_mart_application_overview_risk_flag ..................... [[32mPASS[0m in 0.75s]
+[0m02:41:23.014512 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea
+[0m02:41:23.015191 [debug] [Thread-1 (]: Began running node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:41:23.016227 [info ] [Thread-1 (]: 23 of 23 START test unique_mart_application_overview_inventory_snapshot_sha256 . [RUN]
+[0m02:41:23.017461 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.knowledge_gold.not_null_mart_application_overview_risk_flag.670eb58fea, now test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1)
+[0m02:41:23.018240 [debug] [Thread-1 (]: Began compiling node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:41:23.025681 [debug] [Thread-1 (]: Writing injected SQL for node "test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1"
+[0m02:41:23.026856 [debug] [Thread-1 (]: Began executing node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:41:23.030715 [debug] [Thread-1 (]: Writing runtime sql for node "test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1"
+[0m02:41:23.031713 [debug] [Thread-1 (]: On test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "knowledge_gold", "target_name": "live", "node_id": "test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select inventory_snapshot_sha256 as unique_field
+  from `ent-knowledge-intel-pipeline`.`gold_v4`.`mart_application_overview`
+  where inventory_snapshot_sha256 is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:41:23.032367 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:41:23.151197 [info ] [Thread-2 (]: 22 of 23 PASS release_grain .................................................... [[32mPASS[0m in 0.62s]
+[0m02:41:23.152183 [debug] [Thread-2 (]: Finished running node test.knowledge_gold.release_grain
+[0m02:41:23.348765 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ent-knowledge-intel-pipeline&j=bq:EU:e97fe7ab-dd5b-4b7b-b2fd-11cba7387a2c&page=queryresults
+[0m02:41:23.634502 [info ] [Thread-1 (]: 23 of 23 PASS unique_mart_application_overview_inventory_snapshot_sha256 ....... [[32mPASS[0m in 0.62s]
+[0m02:41:23.635437 [debug] [Thread-1 (]: Finished running node test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1
+[0m02:41:23.638137 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:41:23.639427 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:41:23.640027 [debug] [MainThread]: Connection 'test.knowledge_gold.unique_mart_application_overview_inventory_snapshot_sha256.bb057099d1' was properly closed.
+[0m02:41:23.640550 [debug] [MainThread]: Connection 'test.knowledge_gold.release_grain' was properly closed.
+[0m02:41:23.641151 [info ] [MainThread]: 
+[0m02:41:23.641729 [info ] [MainThread]: Finished running 6 table models, 17 data tests in 0 hours 0 minutes and 20.13 seconds (20.13s).
+[0m02:41:23.647470 [debug] [MainThread]: Command end result
+[0m02:41:23.689337 [debug] [MainThread]: Wrote artifact WritableManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/manifest.json
+[0m02:41:23.692325 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/semantic_manifest.json
+[0m02:41:23.701405 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/gold/target/run_results.json
+[0m02:41:23.702257 [info ] [MainThread]: 
+[0m02:41:23.702966 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:41:23.703542 [info ] [MainThread]: 
+[0m02:41:23.704144 [info ] [MainThread]: Done. PASS=23 WARN=0 ERROR=0 SKIP=0 TOTAL=23
+[0m02:41:23.705102 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 28.62701, "process_in_blocks": "212024", "process_kernel_time": 1.664315, "process_mem_max_rss": "369796", "process_out_blocks": "4264", "process_user_time": 10.076117}
+[0m02:41:23.706045 [debug] [MainThread]: Command `dbt build` succeeded at 02:41:23.705887 after 28.63 seconds
+[0m02:41:23.706597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707944fc4200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707944694380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x707944676e40>]}
+[0m02:41:23.707162 [debug] [MainThread]: Flushing usage events
+[0m02:41:24.162532 [debug] [MainThread]: An error was encountered while trying to flush usage events
