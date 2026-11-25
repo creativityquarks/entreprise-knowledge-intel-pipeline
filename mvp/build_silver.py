@@ -179,8 +179,7 @@ def main(data_dir=None, demo=False):
     def collect(frames):
         for table, frame in frames.items():
             collected[table].append(frame)
-    for path in paths:
-        manifest = json.loads(path.read_text())
+    for path, manifest in manifests:
         if not isinstance(manifest, dict) or manifest.get('format_version') != 3:
             raise ValueError(f'Legacy/unsupported manifest: {path}; archive it outside runs and recapture')
         if manifest.get('mode') != ('SYNTHETIC_OFFLINE' if demo else 'LIVE'):
