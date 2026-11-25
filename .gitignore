@@ -1,14 +1,26 @@
-.mvp/venv/
-.mvp/.env
-.mvp/*.pyc
-.mvp/data/
-.mvp/data_bkp/
-.mvp/target/
-.mvp/logs/
-./mvp/gold/logs
-.mvp/gold/dbt_packages/
-.mvp/__pycache__/
-.mvp/*.py[cod]
-.mvp/logs/
+# Python virtual environments
+.venv/
+venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+!.env.example
+
+# MVP generated data
+/mvp/data/
+/mvp/data_bkp/
+
+# dbt generated artifacts
+/mvp/target/
+/mvp/logs/
+/mvp/gold/target/
+/mvp/gold/logs/
+/mvp/gold/dbt_packages/
+
+# Exploration outputs
 /explorations/pitch_demo_1_v3/output/
 /explorations/knowledge_protocol_validation_v4/data/
