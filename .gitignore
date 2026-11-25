@@ -34,3 +34,5 @@ __pycache__/
 /explorations/knowledge_protocol_validation_v4/data/raw/*.json
 /explorations/knowledge_protocol_validation_v4/data/outputs/*
 !/explorations/knowledge_protocol_validation_v4/data/outputs/.gitkeep
+
+sa-key.json
