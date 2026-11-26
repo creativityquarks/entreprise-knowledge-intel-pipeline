@@ -39,3 +39,8 @@ __pycache__/
 !/explorations/knowledge_protocol_validation_v4/data/outputs/.gitkeep
 
 sa-key.json
+
+# Airflow environment and runtime
+.venv-airflow/
+/mvp/airflow/*
+!/mvp/airflow/dags/
