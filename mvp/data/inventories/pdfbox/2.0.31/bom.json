@@ -1,0 +1,1452 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:53aa0480-6f85-3686-a92e-aaf8c1280967",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-11-25T02:32:52Z",
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.1",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "9c7a565cf28cce58557d0c621c5ea4b1"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "be882d5a22050bfa9d19090b1420c188617d0e1c"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "698e0f37184a5b28c245c4065fd036dfce253b52f82fbb7113d81d36326cc249"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "c0f0b11026858166f872a2eb54719492e5cecaa0bc9cd6b30b3ecb4a174eed220f4a1b5829d18d6734128e778d3cb3db7ffed177c92866133129cb29081814a0"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "d80964707dfe5caca8c70521d5066f57589304c0a657e6fbc7c0614ea0fc7b3b3dbe7778361eee0f54ba111e9cb0ffcb"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "80bc3a275d9514bc457461ff52a72add8c7ecbbc01d8912efce57139016c544ee776981851be0a58fa977ab4221f703f"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "142317d6f245390f4fd2d0c100b16281b8dfc5c0c2cff86943bdcc97039cb699"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "af0fb9137c90b65d1a07f72e4d51ae509956cdb8800f35c961b037cdda1fe4a14ce3b496cef71ba85f1621affcfe29cd42704ae4191ff0b090a9602087c8997b"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox-parent@2.0.31?type=pom",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox-parent",
+      "version" : "2.0.31",
+      "description" : "The Apache Software Foundation provides support for the Apache community of open-source software projects. The Apache projects are characterized by a collaborative, consensus based development process, an open and pragmatic software license, and a desire to create high quality software that leads the way in its field. We consider ourselves not simply a group of projects sharing a server, but rather a community of developers and users.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox-parent@2.0.31?type=pom",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeAggregateBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,runtime"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "fontbox",
+      "version" : "2.0.31",
+      "description" : "The Apache FontBox library is an open source Java tool to obtain low level information from font files. FontBox is a subproject of Apache PDFBox.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://pdfbox.apache.org/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/fontbox"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/commons-logging/commons-logging@1.2?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "commons-logging",
+      "name" : "commons-logging",
+      "version" : "1.2",
+      "description" : "Apache Commons Logging is a thin adapter allowing configurable bridging to other, well known logging systems.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "040b4b4d8eac886f6b4a2a3bd2f31b00"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4bfc12adfe4842bf07b657f0369c4cb522955686"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "daddea1ea0be0f56978ab3006b8ac92834afeefbd9b7e4e6316fca57df0fa636"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "ed00dbfabd9ae00efa26dd400983601d076fe36408b7d6520084b447e5d1fa527ce65bd6afdcb58506c3a808323d28e88f26cb99c6f5db9ff64f6525ecdfa557"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "ac20720d7156131478205f1b454395abf84cfc8da2f163301af32f63bd3c4764bd26cb54ed53800f33193ae591f3ce9c"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "628eb4407e95dca84da1a06b08a6d9b832a49de8472b1b217e8607f08efeeed18b996232d64dd07f03e78e0e3bb4b078"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "9aab62deccf156ee6e324c925dfc30ecb53e8465802863a551901a461424e807"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "3fd76857f6d20c03799537cc961c1c4ddf1c375c6c192fb982363e3b9397ba138b77f24ef38b4202f44e37586789c0320e4de18fdadd2772304fd14a9b26d552"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/commons-logging/commons-logging@1.2?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://commons.apache.org/proper/commons-logging/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://continuum-ci.apache.org/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "http://issues.apache.org/jira/browse/LOGGING"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "http://mail-archives.apache.org/mod_mbox/commons-user/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "http://svn.apache.org/repos/asf/commons/proper/logging/trunk"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "xmpbox",
+      "version" : "2.0.31",
+      "description" : "The Apache XmpBox library is an open source Java tool that implements Adobe's XMP(TM) specification. It can be used to parse, validate and create xmp contents. It is mainly used by subproject preflight of Apache PDFBox. XmpBox is a subproject of Apache PDFBox.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/xmpbox/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/xmpbox"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox",
+      "version" : "2.0.31",
+      "description" : "The Apache PDFBox library is an open source Java tool for working with PDF documents.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/pdfbox/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/pdfbox"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "fontbox",
+      "version" : "2.0.31",
+      "description" : "The Apache FontBox library is an open source Java tool to obtain low level information from font files. FontBox is a subproject of Apache PDFBox.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "f36b37cbc1d0916656c51ef8ac3116a3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "96999ecdb7324bf718b88724818fa62f81286c36"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "0d36d14d3a43fd7a7d8d84d317ed8201b9d16fcba75b27e54f6f39775348c032"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "67fb05fc1ebe5e6823ca68b583974dc353b05c4a81a529e62dda66c85469889a3cbd0a25a588a0e7e4cda2740345b9f99baf25281fdc976ddeef5ee82e98e6af"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "4f49cfa746108a9839a17a6639c5340050a9809f511cbce6cb173db5449cf8e5a0ce96344ccc456f9efcfbb8431651a7"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "f4430c1abb3ae9d919a50b4efeead40086c08585f2527e68b91adef0865cc531ad9e13ab932d6f0cc3907fb139d696ba"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "cb504f7132b69c058194bd4c6f636fe3fa9a6878ef7dad092b9666e6c2e28a33"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "2927ffeb217aad5d2b18dfa586c1382c132de5b4c2424e8bb7803fd7a99f6881117abad846e8dcd4a2982f446e658173ddde0b55ea65011528e1873ebb008c4d"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://pdfbox.apache.org/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/fontbox"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.bouncycastle/bcpkix-jdk15to18@1.77?type=jar",
+      "group" : "org.bouncycastle",
+      "name" : "bcpkix-jdk15to18",
+      "version" : "1.77",
+      "description" : "The Bouncy Castle Java APIs for CMS, PKCS, EAC, TSP, CMP, CRMF, OCSP, and certificate generation. This jar contains APIs for JDK 1.5 to JDK 1.8. The APIs can be used in conjunction with a JCE/JCA provider such as the one provided with the Bouncy Castle Cryptography APIs.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "3791b837224edb1217ba41a5269bae82"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0f45ae093b42d684cc4839973e036ecc8705e7fc"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "264e3757d6443388ea6fcfb5e6b716c8681ec2f7c70fdd06f439f2aab17f1861"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "ed7e68ddb226be3d79175077cb9ba1051e92b992f6fc040342855da076dde28c4562efd0dd6a29eb87827724b6b81682cdb39109bc7d794dc730006e55abfa0f"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "861ef9fb736fecaa2aa4ab3682e76a7c53a999e9f341fe3a0eb44b3a921e57f6b5281bfc6735e4db9dc909f187a19fe9"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "5ec9f53915f3443846dd54623638733123688246d0bfa25a4c5545e52281ba2781dfb4ba9cde307fa21c7162225f97e1"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "a6ceec3e388ffd5cac3973c8117b8d657861ff635c802f8b79e59e1edc2cbe95"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "cda4f8a56515aa22759b300000de466ab64337f84e285a34e589d86012205366a4ec255e8deae99b538546a0cc4520fb71a6543dac5bbf2b799fc60936f65ae5"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Bouncy Castle Licence",
+            "url" : "http://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.bouncycastle/bcpkix-jdk15to18@1.77?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.bouncycastle.org/java.html"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/bcgit/bc-java/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/bcgit/bc-java"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.bouncycastle/bcutil-jdk15to18@1.77?type=jar",
+      "group" : "org.bouncycastle",
+      "name" : "bcutil-jdk15to18",
+      "version" : "1.77",
+      "description" : "The Bouncy Castle Java APIs for ASN.1 extension and utility APIs used to support bcpkix and bctls. This jar contains APIs for JDK 1.5 to JDK 1.8.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "ed945bf03d85044699ec7506168bddfc"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "eec4bdc432e4c8cf5babea9cab9cfcc70c8a7b76"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "4672f139e5455d849b85bb73e3a7921bc2ad2d3c35aacc005762959f656de1cb"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "84f34e6ecb8876a4a1b58b06e62c2c3cf1a4de537a8069bc85cfab76592fa4e22aad9ec5d9d31b66662f4fb00568e8006cad6f21e962adfaa4c3e677a75b2911"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "12ebefdb13fca72946756630ca172e12969541c947a9dc1e25b4734a1c7ba1501d8412fd6e3f66131e6324d2cae457d9"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "594155febd1935aa93c4302dcdfa7493f372d3baf3b7d134ddd765842cad11cca3dc580ab5acf026afa4c21faa62fa4f"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "17c02ccbb56c766a2a285120409ece4c0aa7f9b3ed98945c2ded56f186b1dc7e"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "410dc1f58c14f7268edee712ffd412ecf68c336668c657e9bf692b2cc477f1c71311e51e441d2bafaab19cfe730cdf711b489b70200f23ee79f099594b4c0a4b"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Bouncy Castle Licence",
+            "url" : "http://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.bouncycastle/bcutil-jdk15to18@1.77?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.bouncycastle.org/java.html"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/bcgit/bc-java/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/bcgit/bc-java"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar",
+      "group" : "org.bouncycastle",
+      "name" : "bcprov-jdk15to18",
+      "version" : "1.77",
+      "description" : "The Bouncy Castle Crypto package is a Java implementation of cryptographic algorithms. This jar contains JCE provider and lightweight API for the Bouncy Castle Cryptography APIs for JDK 1.5 to JDK 1.8.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "7cdf701daf1a20607d0ff709a46383c5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "475984acd55286a49a4acb40c12c3702f72e17ee"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "c121f7e5aa559444059d44dfb8f55bf9ef0ce2faa22ad643620fa4991285a406"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "b16c8a02748fcc15959410679c7685eaf0223a6b02fc1061e60d7163243c99901a772ba8ae111da2e5943e1390378a5f14da2b465fc00f372d0d8801c84158cb"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "e1397f19d51946017c1cc48cce01d1d0bfd16fdfd6eb5d458b69b42b3cf6b8a4593aa7da6312387e97d3db7c163e7058"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "5ed844d185aff866a04720f377128a3950a16883d560d167755f19814c4a974f652f6cc30a68a71f0c334d889adabe1f"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "62cc3b1b6ec00d44ff3181535e0aa2bf5694bc93e8b380080e6ab4650d7adc77"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "ac3be0b81a3468cd66ca55c19784b4f1c58b8dbe6684caec1cf8eb1625e9e46d982fadee7347b6209a685f483fcc1f2dcae8c193d68d353e06f7040c379145d2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Bouncy Castle Licence",
+            "url" : "http://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.bouncycastle.org/java.html"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/bcgit/bc-java/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/bcgit/bc-java"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/preflight@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "preflight",
+      "version" : "2.0.31",
+      "description" : "The Apache Preflight library is an open source Java tool that implements a parser compliant with the ISO-19005 (PDF/A) specification. Preflight is a subproject of Apache PDFBox.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/preflight@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/preflight/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/preflight"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox",
+      "version" : "2.0.31",
+      "description" : "The Apache PDFBox library is an open source Java tool for working with PDF documents.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "d9b906b4d480797517b198aa5583e0a8"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "29b25053099bc30784a766ccb821417e06f4b8a1"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "8a8d10b41961e69ffb8b7f6aa8936d34b96a8854aaf47a8cc081f4289120cef3"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "be78e37f450a947ca82ea4257ef93d0f41a8dffafe291c69b6f9dcfe4f9eccff0340b1d2d956c35634f515139702179862b047e86d2d559fbfebee9024dac3e7"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "06da281afa5bf63c326e0ddc510468df97231637bcec7567096b60cd349a7dd33874a65d7a3ccd74411c267c9f1cbbc8"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "52458d4412337738a2d4e4fc4ca46532e526232d0f25f030b3e7da1aa8a8c9e5c38352123d96670ae81bc04be87743f5"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "774b55dc2c2e6c8e02b3562d1dc00e6527089a4147a37fca2fed2a7e7f456b88"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "cf2cabfffed66ecbd78e437500cf98ab6e9b1064491ef03a4e266417180c15ef50083dda20fdf77acc6c47cfde4cee5ff167003bca5c2a20220ec871469d5a35"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/pdfbox/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/pdfbox"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "xmpbox",
+      "version" : "2.0.31",
+      "description" : "The Apache XmpBox library is an open source Java tool that implements Adobe's XMP(TM) specification. It can be used to parse, validate and create xmp contents. It is mainly used by subproject preflight of Apache PDFBox. XmpBox is a subproject of Apache PDFBox.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "892da917ee2fe13113cbfcb74df14e73"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7520eb8e34abfddb1c49577f01f4e1d1cf5c3e2c"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "1b3edff1818b31804392ef89ff8e184eed55c0dabeaa0f4e20244adf3738b9b8"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "ec7b32ea4e072cbf58f5cf59c0d8724c67bc240fad7539c6741d3f9631dfed65729309c4b90f57aea47a5f356c2f575573deaf74a7bbd1fd9dca4857682b44b9"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "af41cdc8fa0e9042f14510e40afde15d37365713cfd82815bee84f6a2a63b53b63eb3a9925342a8882c296c4e4ff6dd1"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "19e1047351299d6dfeaabb8b35149674ea8f3d8c22d953b52b621096ee61de72d2e8072e3b9d7c4ab3fc7f4111cb5112"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "13a97c2ba359d54854f1e9d1c55d5d7c01d43d62bbf25ab8128c5b3bcad47da0"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "dac4f4cf3495e99f2832264769a0f062eac6b4e970059efda7e739aede7a81f4c0a1b1950da4395b34e6e5442dbdef81390ed0d34cacd18000a05082564471a6"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/xmpbox/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/xmpbox"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/preflight-app@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "preflight-app",
+      "version" : "2.0.31",
+      "description" : "The Apache Software Foundation provides support for the Apache community of open-source software projects. The Apache projects are characterized by a collaborative, consensus based development process, an open and pragmatic software license, and a desire to create high quality software that leads the way in its field. We consider ourselves not simply a group of projects sharing a server, but rather a community of developers and users.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/preflight-app@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://pdfbox.apache.org/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/preflight-app"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox-debugger@2.0.31?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox-debugger",
+      "version" : "2.0.31",
+      "description" : "The Apache PDFBox library is an open source Java tool for working with PDF documents. This artefact contains the PDFDebugger.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox-debugger@2.0.31?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/pdfbox-debugger/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/pdfbox-debugger"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox-tools@2.0.31?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox-tools",
+      "version" : "2.0.31",
+      "description" : "The Apache PDFBox library is an open source Java tool for working with PDF documents. This artefact contains commandline tools using Apache PDFBox.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox-tools@2.0.31?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/pdfbox-tools/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/pdfbox-tools"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox-app@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox-app",
+      "version" : "2.0.31",
+      "description" : "The Apache Software Foundation provides support for the Apache community of open-source software projects. The Apache projects are characterized by a collaborative, consensus based development process, an open and pragmatic software license, and a desire to create high quality software that leads the way in its field. We consider ourselves not simply a group of projects sharing a server, but rather a community of developers and users.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox-app@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://pdfbox.apache.org/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/pdfbox-app"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/debugger-app@2.0.31?type=bundle",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "debugger-app",
+      "version" : "2.0.31",
+      "description" : "The Apache Software Foundation provides support for the Apache community of open-source software projects. The Apache projects are characterized by a collaborative, consensus based development process, an open and pragmatic software license, and a desire to create high quality software that leads the way in its field. We consider ourselves not simply a group of projects sharing a server, but rather a community of developers and users.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/debugger-app@2.0.31?type=bundle",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://pdfbox.apache.org/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/debugger-app"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.pdfbox/pdfbox-examples@2.0.31?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.pdfbox",
+      "name" : "pdfbox-examples",
+      "version" : "2.0.31",
+      "description" : "The Apache PDFBox library is an open source Java tool for working with PDF documents. This artefact contains examples on how the library can be used.",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.pdfbox/pdfbox-examples@2.0.31?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.apache.org/pdfbox-parent/pdfbox-examples/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/PDFBOX"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://svn.apache.org/viewvc/pdfbox/tags/2.0.31/pdfbox-examples"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.lucene/lucene-core@4.7.2?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.lucene",
+      "name" : "lucene-core",
+      "version" : "4.7.2",
+      "description" : "Apache Lucene Java Core",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "6ed7375bfe046610363a10915ce2dd8b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c9ec1d5b48635aa032ca3d2c824dea0e6523a4a5"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "7db3129531ec0fadfbcab1a017ccb6235aee0ca70b735e85e6fee6201020ba3f"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "ebe5a71f3fc8beece9129fbea6d91865819f1604ccbfd64826db70aab36a9cfeab8a767ee451b675849276a3c127c55d7c8614024fadae9ee978450df48efdd9"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "1b404a02d7949c6c35367f5883ca1517f9ddb1c8c52e3396355e2d440cee1e3f1aa9e2df4fb9d13790d640664e14a13e"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "3d3ac164fdb9ecb5945d0ef2267e98385890e1cb0a44f1d7fd9d541b06c3d5451bb0f040d6f10949e6233f0738b25c19"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "5093c1dec8c467ba7c1f9b4b7549c07b862cbff5c5e707782b7556b98cff2065"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "99085f56cec5bffa42e942b952c94a412d9f01dfacb641911f923724ff98cd812e870cfb1a6ecd34473b577e1eee6fd680b0aada162ebc0035a68f854f9fba90"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.lucene/lucene-core@4.7.2?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://lucene.apache.org/lucene-parent/lucene-core"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://builds.apache.org/computer/lucene/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/LUCENE"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "http://mail-archives.apache.org/mod_mbox/lucene-general/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "http://svn.apache.org/viewvc/lucene/dev/branches/branch_4x/lucene/core"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.lucene/lucene-analyzers-common@4.7.2?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.lucene",
+      "name" : "lucene-analyzers-common",
+      "version" : "4.7.2",
+      "description" : "Additional Analyzers",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "cbc49dfc4ed6ee29db3a1ed5a84c5a9e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "72017b7643f6e2389a140099a3fce198a569b599"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "56c4ea0bdfb0f177a924ab0673d881f83e575220a96feaa6fa9a682f129a28fd"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "a8ec5b3cb7ab36bc2ced749bf32e99d56e28d0dca1fcc807b9233952ebacbb4f9ebd9ae53d2c09165394eca93300c860b8c3e75024e7a695f4de271f21d3c419"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "dbf640979edc8644f825520d86847647a7ccb20095378d5a7e7eafa38d3bce137d08867a332936404212dcf29c32037d"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "c7fe7647175575685425084d6521b3250b78ef830b5dc10eced0010a94e623a307e99beb4f872b6b18ad8a350be6d477"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "ace4f9246abf41b35b45bd4dd1a0dd604c5f6cd0c0f159c1db04e7d4c8ebde73"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "0cfeff4a964568a44c577627e2d903b2e1388cdd052257d3e25731f30832a04d96c8b33e86b02489b4e4a3697b4bcdeef313fe4f92c143a05539063461b67a8c"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.lucene/lucene-analyzers-common@4.7.2?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://lucene.apache.org/lucene-parent/lucene-analyzers-common"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://builds.apache.org/computer/lucene/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/LUCENE"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "http://mail-archives.apache.org/mod_mbox/lucene-general/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "http://svn.apache.org/viewvc/lucene/dev/branches/branch_4x/lucene/analysis/common"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.ant/ant@1.9.16?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.ant",
+      "name" : "ant",
+      "version" : "1.9.16",
+      "description" : "master POM",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "9931e11c4983cea78cfec8a83eaac9fd"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "11ee7aa0f103bedf6d914c955118bb732b805602"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "ddce1db0711d6dbf70e012a9add4db26212bc43182a5bbdc71701c3ad7596fce"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "ab5d8959a57fbc20ba2109bf19ca41b6147a804e34352aec01418edb8455e0cbad09343d420ec058d6cab09d649ec21aea7a0263a159c4a51dd41b5b26847fc0"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "ac68005addc0d3d321d4fcdf51e8b53ededb6408ab44088e75609e9e7fc1fdefab49d338a1248cd480787cdd62444c58"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "a982f85f7e7d17c89795094d63ff696ce96eeaee4976df5836f9ce2daed433b8824110c18a6e58abec71558e8aef95f8"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "3577ef211ba0406f6f2a484ead9ba2a2d3b8766775901073cce1af102b2265d4"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "5716eaaf04d4da60473d4c82ebe8fc72d7e81376f067fc23fd7c9faf9a0df076945424860799834c832020904673472cd3f70753a048fcdf16a85ec77743809f"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.ant/ant@1.9.16?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://ant.apache.org/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://builds.apache.org/job/Ant_BuildFromPOMs/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://nowhere.net/"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "http://issues.apache.org/bugzilla/"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "http://mail-archives.apache.org/mod_mbox/ant-dev"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://git-wip-us.apache.org/repos/asf/ant.git/ant"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.ant/ant-launcher@1.9.16?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.ant",
+      "name" : "ant-launcher",
+      "version" : "1.9.16",
+      "description" : "master POM",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "b47dc0672ce6c59df384f410f3e1ed8e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "61eda3066a81d26e99e9b5f6935337cff9783f9c"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "b38fea498fbebb7174c587ab6d2ded3e0d32323ebc714b4e156a9d530049c52b"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "685a6e294b0033731ce2271b3cb903e20e5352c768f855e5d4112b07b3347c5690d94b6f772de3903e5a1d919a5e1205a105aea186b56ef2197e3ddda2f7bf30"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "f07c67ad54d8cc418d8be58001d28baa13046eef443487a6ab113490adb136527cb1111d99edfc7d4cee8e8ae240c492"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "dd53d4859f494ead284c1e61d6f70aefcca5c16853836edc8c03c613746514a10a2abb920a93b66a42feaa601810034e"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "4e5ea03c8a42757727bc26b35d2a31242cb3a2bc8902fa6dbfc1e146d44ce661"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "51428aa484e1b234498327fb09c725310a835d27a95b9b90c933e3d4f7623e31fbac8cad66e4533acfe684fdc171daedf9d07ee98122b09b2aa5046a79362393"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.ant/ant-launcher@1.9.16?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://ant.apache.org/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://builds.apache.org/job/Ant_BuildFromPOMs/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://nowhere.net/"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "http://issues.apache.org/bugzilla/"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "http://mail-archives.apache.org/mod_mbox/ant-dev"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://git-wip-us.apache.org/repos/asf/ant.git/ant-launcher"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox-parent@2.0.31?type=pom",
+      "dependsOn" : [
+        "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/preflight@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/preflight-app@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/pdfbox-debugger@2.0.31?type=jar",
+        "pkg:maven/org.apache.pdfbox/pdfbox-tools@2.0.31?type=jar",
+        "pkg:maven/org.apache.pdfbox/pdfbox-app@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/debugger-app@2.0.31?type=bundle",
+        "pkg:maven/org.apache.pdfbox/pdfbox-examples@2.0.31?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=bundle",
+      "dependsOn" : [
+        "pkg:maven/commons-logging/commons-logging@1.2?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/commons-logging/commons-logging@1.2?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=bundle",
+      "dependsOn" : [
+        "pkg:maven/commons-logging/commons-logging@1.2?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=bundle",
+      "dependsOn" : [
+        "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=jar",
+        "pkg:maven/commons-logging/commons-logging@1.2?type=jar",
+        "pkg:maven/org.bouncycastle/bcpkix-jdk15to18@1.77?type=jar",
+        "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=jar",
+      "dependsOn" : [
+        "pkg:maven/commons-logging/commons-logging@1.2?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.bouncycastle/bcpkix-jdk15to18@1.77?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar",
+        "pkg:maven/org.bouncycastle/bcutil-jdk15to18@1.77?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.bouncycastle/bcutil-jdk15to18@1.77?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/preflight@2.0.31?type=bundle",
+      "dependsOn" : [
+        "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=jar",
+        "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.pdfbox/fontbox@2.0.31?type=jar",
+        "pkg:maven/commons-logging/commons-logging@1.2?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=jar",
+      "dependsOn" : [
+        "pkg:maven/commons-logging/commons-logging@1.2?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/preflight-app@2.0.31?type=bundle",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox-debugger@2.0.31?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.pdfbox/pdfbox@2.0.31?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox-tools@2.0.31?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.pdfbox/pdfbox-debugger@2.0.31?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox-app@2.0.31?type=bundle",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/debugger-app@2.0.31?type=bundle",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.pdfbox/pdfbox-examples@2.0.31?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.bouncycastle/bcprov-jdk15to18@1.77?type=jar",
+        "pkg:maven/org.bouncycastle/bcpkix-jdk15to18@1.77?type=jar",
+        "pkg:maven/org.apache.pdfbox/pdfbox-tools@2.0.31?type=jar",
+        "pkg:maven/org.apache.pdfbox/xmpbox@2.0.31?type=jar",
+        "pkg:maven/org.apache.lucene/lucene-core@4.7.2?type=jar",
+        "pkg:maven/org.apache.lucene/lucene-analyzers-common@4.7.2?type=jar",
+        "pkg:maven/org.apache.ant/ant@1.9.16?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.lucene/lucene-core@4.7.2?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.lucene/lucene-analyzers-common@4.7.2?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.lucene/lucene-core@4.7.2?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.ant/ant@1.9.16?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.ant/ant-launcher@1.9.16?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.ant/ant-launcher@1.9.16?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}

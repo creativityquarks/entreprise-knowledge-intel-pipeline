@@ -1,0 +1,44 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] PDFBox parent                                                      [pom]
+[INFO] Apache FontBox                                                  [bundle]
+[INFO] Apache XmpBox                                                   [bundle]
+[INFO] Apache PDFBox                                                   [bundle]
+[INFO] Apache Preflight                                                [bundle]
+[INFO] Apache Preflight application                                    [bundle]
+[INFO] Apache PDFBox Debugger                                             [jar]
+[INFO] Apache PDFBox tools                                                [jar]
+[INFO] Apache PDFBox application                                       [bundle]
+[INFO] Apache PDFBox Debugger application                              [bundle]
+[INFO] Apache PDFBox examples                                             [jar]
+[INFO] PDFBox reactor                                                     [pom]
+[INFO] 
+[INFO] ------------------< org.apache.pdfbox:pdfbox-reactor >------------------
+[INFO] Building PDFBox reactor 2.0.29                                    [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- cyclonedx-maven-plugin:2.9.1:makeAggregateBom (default-cli) @ pdfbox-reactor ---
+[INFO] Skipping CycloneDX goal, because module skips deploy
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for PDFBox reactor 2.0.29:
+[INFO] 
+[INFO] PDFBox parent ...................................... SKIPPED
+[INFO] Apache FontBox ..................................... SKIPPED
+[INFO] Apache XmpBox ...................................... SKIPPED
+[INFO] Apache PDFBox ...................................... SKIPPED
+[INFO] Apache Preflight ................................... SKIPPED
+[INFO] Apache Preflight application ....................... SKIPPED
+[INFO] Apache PDFBox Debugger ............................. SKIPPED
+[INFO] Apache PDFBox tools ................................ SKIPPED
+[INFO] Apache PDFBox application .......................... SKIPPED
+[INFO] Apache PDFBox Debugger application ................. SKIPPED
+[INFO] Apache PDFBox examples ............................. SKIPPED
+[INFO] PDFBox reactor ..................................... SUCCESS [  0.365 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.327 s
+[INFO] Finished at: 2026-11-25T02:58:31Z
+[INFO] ------------------------------------------------------------------------

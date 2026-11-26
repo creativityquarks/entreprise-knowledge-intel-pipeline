@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache PDFBox parent                                               [pom]
+[INFO] Apache FontBox                                                  [bundle]
+[INFO] Apache XmpBox                                                   [bundle]
+[INFO] Apache PDFBox                                                   [bundle]
+[INFO] Apache Preflight                                                [bundle]
+[INFO] Apache Preflight application                                    [bundle]
+[INFO] Apache PDFBox Debugger                                             [jar]
+[INFO] Apache PDFBox tools                                                [jar]
+[INFO] Apache PDFBox application                                       [bundle]
+[INFO] Apache PDFBox Debugger application                              [bundle]
+[INFO] Apache PDFBox examples                                             [jar]
+[INFO] Apache PDFBox release                                              [pom]
+[INFO] 
+[INFO] ------------------< org.apache.pdfbox:pdfbox-parent >-------------------
+[INFO] Building Apache PDFBox parent 2.0.31                              [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- cyclonedx-maven-plugin:2.9.1:makeAggregateBom (default-cli) @ pdfbox-parent ---
+[INFO] CycloneDX: Resolving Aggregated Dependencies
+[INFO] Excluding pdfbox-release
+[INFO] CycloneDX: Creating BOM version 1.6 with 21 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/data/worktrees/pdfbox/2.0.31/target/bom.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO]            attaching as pdfbox-parent-2.0.31-cyclonedx.json
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache PDFBox parent 2.0.31:
+[INFO] 
+[INFO] Apache PDFBox parent ............................... SUCCESS [  4.766 s]
+[INFO] Apache FontBox ..................................... SKIPPED
+[INFO] Apache XmpBox ...................................... SKIPPED
+[INFO] Apache PDFBox ...................................... SKIPPED
+[INFO] Apache Preflight ................................... SKIPPED
+[INFO] Apache Preflight application ....................... SKIPPED
+[INFO] Apache PDFBox Debugger ............................. SKIPPED
+[INFO] Apache PDFBox tools ................................ SKIPPED
+[INFO] Apache PDFBox application .......................... SKIPPED
+[INFO] Apache PDFBox Debugger application ................. SKIPPED
+[INFO] Apache PDFBox examples ............................. SKIPPED
+[INFO] Apache PDFBox release .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.518 s
+[INFO] Finished at: 2026-11-25T02:32:52Z
+[INFO] ------------------------------------------------------------------------

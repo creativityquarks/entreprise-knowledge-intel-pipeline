@@ -80,6 +80,19 @@ def main():
     if args.generated:
         if args.demo or args.sbom:
             parser.error('--generated cannot be combined with --demo or --sbom')
+        import os
+        bronze_bucket = os.getenv('BRONZE_BUCKET')
+        inv_dir = ROOT / 'data' / 'inventories'
+        if bronze_bucket and not any(inv_dir.glob('*/*/bom.json')):
+            try:
+                from google.cloud import storage as gcs
+                bucket = gcs.Client().bucket(bronze_bucket)
+                for blob in bucket.list_blobs(prefix='inventories/'):
+                    dest = ROOT / 'data' / blob.name
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    blob.download_to_filename(dest)
+            except Exception as exc:
+                print(f'GCS inventory fetch warning: {exc}')
         # Use the curated registry, not an arbitrary directory glob; explicitly
         # record planned releases whose genuine inventory is missing.
         apps = json.loads((ROOT/'applications.json').read_text())

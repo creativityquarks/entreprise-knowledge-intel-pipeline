@@ -11,8 +11,11 @@ __pycache__/
 !.env.example
 
 # MVP generated data
-/mvp/data/
+/mvp/data/*
+!/mvp/data/inventories/
 /mvp/data_bkp/
+*.rar
+*.zip
 
 # dbt generated artifacts
 /mvp/target/
