@@ -1,0 +1,56 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Maven                                                       [pom]
+[INFO] Maven Model                                                        [jar]
+[INFO] Maven Artifact                                                     [jar]
+[INFO] Maven Plugin API                                                   [jar]
+[INFO] Maven Builder Support                                              [jar]
+[INFO] Maven Model Builder                                                [jar]
+[INFO] Maven Settings                                                     [jar]
+[INFO] Maven Settings Builder                                             [jar]
+[INFO] Maven Repository Metadata Model                                    [jar]
+[INFO] Maven Artifact Resolver Provider                                   [jar]
+[INFO] Maven Core                                                         [jar]
+[INFO] Maven SLF4J Simple Provider                                        [jar]
+[INFO] Maven Embedder                                                     [jar]
+[INFO] Maven Compat                                                       [jar]
+[INFO] Apache Maven Distribution                                          [pom]
+[INFO] 
+[INFO] -----------------------< org.apache.maven:maven >-----------------------
+[INFO] Building Apache Maven 3.9.6                                       [1/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- cyclonedx-maven-plugin:2.9.1:makeAggregateBom (default-cli) @ maven ---
+[INFO] CycloneDX: Resolving Aggregated Dependencies
+[WARNING] BOM dependency listed but is not depended upon: pkg:maven/aopalliance/aopalliance@1.0?type=jar
+[INFO] CycloneDX: Creating BOM version 1.6 with 53 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/data/worktrees/maven/maven-3.9.6/target/bom.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO]            attaching as maven-3.9.6-cyclonedx.json
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Maven 3.9.6:
+[INFO] 
+[INFO] Apache Maven ....................................... SUCCESS [  7.163 s]
+[INFO] Maven Model ........................................ SKIPPED
+[INFO] Maven Artifact ..................................... SKIPPED
+[INFO] Maven Plugin API ................................... SKIPPED
+[INFO] Maven Builder Support .............................. SKIPPED
+[INFO] Maven Model Builder ................................ SKIPPED
+[INFO] Maven Settings ..................................... SKIPPED
+[INFO] Maven Settings Builder ............................. SKIPPED
+[INFO] Maven Repository Metadata Model .................... SKIPPED
+[INFO] Maven Artifact Resolver Provider ................... SKIPPED
+[INFO] Maven Core ......................................... SKIPPED
+[INFO] Maven SLF4J Simple Provider ........................ SKIPPED
+[INFO] Maven Embedder ..................................... SKIPPED
+[INFO] Maven Compat ....................................... SKIPPED
+[INFO] Apache Maven Distribution .......................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.205 s
+[INFO] Finished at: 2026-11-25T02:23:22Z
+[INFO] ------------------------------------------------------------------------
