@@ -1,6 +1,7 @@
 .venv
 pycache
 .env
-data/
+data/*
+!data/inventories/
 tests/
 docs/

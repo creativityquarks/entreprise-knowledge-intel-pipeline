@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run Bronze fetch (dumps to GCS) -> Silver BigQuery MERGE -> Gold dbt build
-CMD ["sh", "-c", "python fetch_live.py --demo && python load_silver_to_bigquery.py --demo && python build_gold.py --demo"]
+CMD ["sh", "-c", "python fetch_live.py --generated && python load_silver_to_bigquery.py && python build_gold.py"]
