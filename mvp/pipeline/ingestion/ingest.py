@@ -110,11 +110,30 @@ def main():
     else:
         live(data_dir, inputs, manifest)
     manifest['finished_at'] = utc_now()
-    failed = bool(manifest['errors'] or any(q['status']!='SUCCESS' for q in manifest['queries']))
-    manifest['status'] = 'PARTIAL' if failed else 'SUCCESS'
+
+    # Ingestion exit-code contract:
+    # 0  = SUCCESS: complete ingestion coverage.
+    # 10 = PARTIAL: valid inventories but incomplete assessment.
+    # 1  = FAILURE: no valid inventory ingested.
+    # Preserve the actual QA status in the persisted manifest.
+    failed = bool(
+        manifest['errors']
+        or any(q['status'] != 'SUCCESS' for q in manifest['queries'])
+    )
+
+    if not manifest['sboms']:
+        manifest['status'] = 'FAILURE'
+        exit_code = 1
+    elif failed:
+        manifest['status'] = 'PARTIAL'
+        exit_code = 10
+    else:
+        manifest['status'] = 'SUCCESS'
+        exit_code = 0
+
     path = save_run_manifest(data_dir, manifest)
     print(f'{manifest["status"]}: {path}')
-    return 1 if failed else 0
+    return exit_code
 
 
 if __name__ == '__main__':
