@@ -84,16 +84,20 @@ if not demo:
         )
 
 # KPI metric cards
-kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
 total_apps = overview.application_id.nunique()
 affected_apps = overview.loc[overview.finding_count > 0, 'application_id'].nunique()
 total_matches = int(overview.finding_count.sum())
 total_releases = len(overview)
+queried = overview['components_queried'].sum()
+to_query = overview['components_to_query'].sum()
+coverage_pct = (100.0 * queried / to_query) if to_query else 0.0
 
 kpi1.metric('🏢 Applications', total_apps)
 kpi2.metric('📦 Assessed Releases', total_releases)
 kpi3.metric('🚨 Affected Applications', affected_apps)
 kpi4.metric('🔍 Total Known Matches', total_matches)
+kpi5.metric('📊 Query Coverage', f'{coverage_pct:.1f}%')
 
 if (overview.risk_flag == 'QUERY_INCOMPLETE').any():
     st.warning('⚠️ Incomplete query coverage detected: match counts are observed lower bounds. Failed, skipped, or missing queries are unknown.')
