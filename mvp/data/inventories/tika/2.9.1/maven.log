@@ -1,0 +1,242 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika BOM                                                    [pom]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] Apache Tika serialization                                          [jar]
+[INFO] Apache Tika parser modules                                         [pom]
+[INFO] Apache Tika standard parser modules and package                    [pom]
+[INFO] Apache Tika standard parser modules                                [pom]
+[INFO] Apache Tika html commons                                           [jar]
+[INFO] Apache Tika jdbc parser commons                                    [jar]
+[INFO] Apache Tika digest commons                                         [jar]
+[INFO] Apache Tika mail commons                                           [jar]
+[INFO] Apache Tika XMP commons                                            [jar]
+[INFO] Apache Tika ZIP commons                                            [jar]
+[INFO] Apache Tika image parser module                                    [jar]
+[INFO] Apache Tika OCR parser module                                      [jar]
+[INFO] Apache Tika audiovideo parser module                               [jar]
+[INFO] Apache Tika text parser module                                     [jar]
+[INFO] Apache Tika code parser module                                     [jar]
+[INFO] Apache Tika html parser module                                     [jar]
+[INFO] Apache Tika font parser module                                     [jar]
+[INFO] Apache Tika XML parser module                                      [jar]
+[INFO] Apache Tika Microsoft parser module                                [jar]
+[INFO] Apache Tika package parser module                                  [jar]
+[INFO] Apache Tika PDF parser module                                      [jar]
+[INFO] Apache Tika Apple parser module                                    [jar]
+[INFO] Apache Tika cad parser module                                      [jar]
+[INFO] Apache Tika mail parser module                                     [jar]
+[INFO] Apache Tika miscellaneous office format parser module              [jar]
+[INFO] Apache Tika news parser module                                     [jar]
+[INFO] Apache Tika crypto parser module                                   [jar]
+[INFO] Apache Tika WARC parser module                                     [jar]
+[INFO] Apache Tika standard parser package                                [jar]
+[INFO] Apache Tika extended parsers                                       [pom]
+[INFO] Apache Tika sqlite3 parser module                                  [jar]
+[INFO] Apache Tika scientific parser module                               [jar]
+[INFO] Apache Tika sqlite3 parser package                                 [jar]
+[INFO] Apache Tika scientific parser package                              [jar]
+[INFO] Apache Tika extended parser integration tests                      [jar]
+[INFO] Apache Tika machine learning (ml) parsers                          [pom]
+[INFO] Apache Tika natural language process module                        [jar]
+[INFO] Apache Tika natural language processing package                    [jar]
+[INFO] Apache Tika age recogniser                                         [jar]
+[INFO] Apache Tika advanced media module                                  [jar]
+[INFO] Apache Tika advanced media package                                 [jar]
+[INFO] Apache Tika Deep Learning (powered by DL4J)                        [jar]
+[INFO] Apache Tika transcribe aws                                      [bundle]
+[INFO] Apache Tika bundles module                                         [pom]
+[INFO] Apache Tika OSGi standard bundle                                [bundle]
+[INFO] Apache Tika XMP                                                 [bundle]
+[INFO] Apache Tika batch                                                  [jar]
+[INFO] Apache Tika language detection                                     [pom]
+[INFO] Apache Tika langdetect test commons                                [jar]
+[INFO] Apache Tika langdetect (legacy builtin)                            [jar]
+[INFO] Apache Tika Lingo24 langdetect                                     [jar]
+[INFO] Apache Tika Optimaize langdetect                                   [jar]
+[INFO] Apache Tika MIT Lincoln Labs langdetect                            [jar]
+[INFO] Apache Tika OpenNLP langdetect                                     [jar]
+[INFO] Apache Tika pipes                                                  [pom]
+[INFO] Apache Tika httpclient commons                                     [jar]
+[INFO] Apache Tika fetchers                                               [pom]
+[INFO] Apache Tika http fetcher                                           [jar]
+[INFO] Apache Tika S3 fetcher                                             [jar]
+[INFO] Apache Tika Google Cloud Storage fetcher                           [jar]
+[INFO] Apache Tika Azure Blob fetcher                                     [jar]
+[INFO] Apache Tika emitters                                               [pom]
+[INFO] Apache Tika filesystem emitter                                     [jar]
+[INFO] Apache Tika S3 emitter                                             [jar]
+[INFO] Apache Tika Kafka emitter                                          [jar]
+[INFO] Apache Tika Apache Solr emitter                                    [jar]
+[INFO] Apache Tika OpenSearch emitter                                     [jar]
+[INFO] Apache Tika GCS emitter                                            [jar]
+[INFO] Apache Tika Azure blob                                             [jar]
+[INFO] Apache Tika jdbc emitter                                           [jar]
+[INFO] Apache Tika Pipes Iterators                                        [pom]
+[INFO] Apache Tika Pipes Iterator - CSV                                   [jar]
+[INFO] Apache Tika Pipes Iterator - JDBC                                  [jar]
+[INFO] Apache Tika Pipes Iterator - S3                                    [jar]
+[INFO] Apache Tika Pipes Iterator - Kafka                                 [jar]
+[INFO] Apache Tika Pipes Iterator - Solr                                  [jar]
+[INFO] Apache Tika Pipes Iterator - Google Cloud Storage                  [jar]
+[INFO] Apache Tika Pipes Iterator - Azure Blob Storage                    [jar]
+[INFO] Apache Tika Pipes Reporters                                        [pom]
+[INFO] Apache Tika Pipes Reporter - OpenSearch                            [jar]
+[INFO] Apache Tika Pipes Reporter - FileSystem Status Reporter            [jar]
+[INFO] Apache Tika Pipes Reporter - JDBC Pipes Reporter                   [jar]
+[INFO] Apache Tika Async CLI                                              [jar]
+[INFO] Apache Tika application                                            [jar]
+[INFO] Apache Tika translate                                           [bundle]
+[INFO] Apache Tika server module                                          [pom]
+[INFO] Apache Tika server core                                            [jar]
+[INFO] Apache Tika standard server                                        [jar]
+[INFO] Apache Tika server client                                          [jar]
+[INFO] Apache Tika eval module                                            [pom]
+[INFO] Apache Tika eval core                                              [jar]
+[INFO] Apache Tika server tika-eval handler                               [jar]
+[INFO] Apache Tika integration tests                                      [pom]
+[INFO] Apache Tika Apache Solr integration tests                          [jar]
+[INFO] Apache Tika OpenSearch integration tests                           [jar]
+[INFO] Apache Tika S3 pipes integration tests                             [jar]
+[INFO] tika-resource-loading-tests                                        [jar]
+[INFO] Apache Tika Kafka pipes integration tests                          [jar]
+[INFO] Apache Tika eval application                                       [jar]
+[INFO] Apache Tika fuzzing                                                [jar]
+[INFO] Apache Tika examples                                               [jar]
+[INFO] Apache Tika Java-7 Components                                   [bundle]
+[INFO] Apache Tika Detectors                                              [pom]
+[INFO] Apache Tika Siegfried wrapper                                      [jar]
+[INFO] Apache Tika                                                        [pom]
+[INFO] 
+[INFO] ------------------------< org.apache.tika:tika >------------------------
+[INFO] Building Apache Tika 2.9.1                                       [1/108]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- cyclonedx-maven-plugin:2.9.1:makeAggregateBom (default-cli) @ tika ---
+[INFO] CycloneDX: Resolving Aggregated Dependencies
+[WARNING] BOM dependency listed but is not depended upon: pkg:maven/org.apache.tika/tika-parent@2.9.1?type=pom
+[INFO] CycloneDX: Creating BOM version 1.6 with 537 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/data/worktrees/tika/2.9.1/target/bom.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO]            attaching as tika-2.9.1-cyclonedx.json
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika 2.9.1:
+[INFO] 
+[INFO] Apache Tika parent ................................. SKIPPED
+[INFO] Apache Tika BOM .................................... SKIPPED
+[INFO] Apache Tika core ................................... SKIPPED
+[INFO] Apache Tika serialization .......................... SKIPPED
+[INFO] Apache Tika parser modules ......................... SKIPPED
+[INFO] Apache Tika standard parser modules and package .... SKIPPED
+[INFO] Apache Tika standard parser modules ................ SKIPPED
+[INFO] Apache Tika html commons ........................... SKIPPED
+[INFO] Apache Tika jdbc parser commons .................... SKIPPED
+[INFO] Apache Tika digest commons ......................... SKIPPED
+[INFO] Apache Tika mail commons ........................... SKIPPED
+[INFO] Apache Tika XMP commons ............................ SKIPPED
+[INFO] Apache Tika ZIP commons ............................ SKIPPED
+[INFO] Apache Tika image parser module .................... SKIPPED
+[INFO] Apache Tika OCR parser module ...................... SKIPPED
+[INFO] Apache Tika audiovideo parser module ............... SKIPPED
+[INFO] Apache Tika text parser module ..................... SKIPPED
+[INFO] Apache Tika code parser module ..................... SKIPPED
+[INFO] Apache Tika html parser module ..................... SKIPPED
+[INFO] Apache Tika font parser module ..................... SKIPPED
+[INFO] Apache Tika XML parser module ...................... SKIPPED
+[INFO] Apache Tika Microsoft parser module ................ SKIPPED
+[INFO] Apache Tika package parser module .................. SKIPPED
+[INFO] Apache Tika PDF parser module ...................... SKIPPED
+[INFO] Apache Tika Apple parser module .................... SKIPPED
+[INFO] Apache Tika cad parser module ...................... SKIPPED
+[INFO] Apache Tika mail parser module ..................... SKIPPED
+[INFO] Apache Tika miscellaneous office format parser module SKIPPED
+[INFO] Apache Tika news parser module ..................... SKIPPED
+[INFO] Apache Tika crypto parser module ................... SKIPPED
+[INFO] Apache Tika WARC parser module ..................... SKIPPED
+[INFO] Apache Tika standard parser package ................ SKIPPED
+[INFO] Apache Tika extended parsers ....................... SKIPPED
+[INFO] Apache Tika sqlite3 parser module .................. SKIPPED
+[INFO] Apache Tika scientific parser module ............... SKIPPED
+[INFO] Apache Tika sqlite3 parser package ................. SKIPPED
+[INFO] Apache Tika scientific parser package .............. SKIPPED
+[INFO] Apache Tika extended parser integration tests ...... SKIPPED
+[INFO] Apache Tika machine learning (ml) parsers .......... SKIPPED
+[INFO] Apache Tika natural language process module ........ SKIPPED
+[INFO] Apache Tika natural language processing package .... SKIPPED
+[INFO] Apache Tika age recogniser ......................... SKIPPED
+[INFO] Apache Tika advanced media module .................. SKIPPED
+[INFO] Apache Tika advanced media package ................. SKIPPED
+[INFO] Apache Tika Deep Learning (powered by DL4J) ........ SKIPPED
+[INFO] Apache Tika transcribe aws ......................... SKIPPED
+[INFO] Apache Tika bundles module ......................... SKIPPED
+[INFO] Apache Tika OSGi standard bundle ................... SKIPPED
+[INFO] Apache Tika XMP .................................... SKIPPED
+[INFO] Apache Tika batch .................................. SKIPPED
+[INFO] Apache Tika language detection ..................... SKIPPED
+[INFO] Apache Tika langdetect test commons ................ SKIPPED
+[INFO] Apache Tika langdetect (legacy builtin) ............ SKIPPED
+[INFO] Apache Tika Lingo24 langdetect ..................... SKIPPED
+[INFO] Apache Tika Optimaize langdetect ................... SKIPPED
+[INFO] Apache Tika MIT Lincoln Labs langdetect ............ SKIPPED
+[INFO] Apache Tika OpenNLP langdetect ..................... SKIPPED
+[INFO] Apache Tika pipes .................................. SKIPPED
+[INFO] Apache Tika httpclient commons ..................... SKIPPED
+[INFO] Apache Tika fetchers ............................... SKIPPED
+[INFO] Apache Tika http fetcher ........................... SKIPPED
+[INFO] Apache Tika S3 fetcher ............................. SKIPPED
+[INFO] Apache Tika Google Cloud Storage fetcher ........... SKIPPED
+[INFO] Apache Tika Azure Blob fetcher ..................... SKIPPED
+[INFO] Apache Tika emitters ............................... SKIPPED
+[INFO] Apache Tika filesystem emitter ..................... SKIPPED
+[INFO] Apache Tika S3 emitter ............................. SKIPPED
+[INFO] Apache Tika Kafka emitter .......................... SKIPPED
+[INFO] Apache Tika Apache Solr emitter .................... SKIPPED
+[INFO] Apache Tika OpenSearch emitter ..................... SKIPPED
+[INFO] Apache Tika GCS emitter ............................ SKIPPED
+[INFO] Apache Tika Azure blob ............................. SKIPPED
+[INFO] Apache Tika jdbc emitter ........................... SKIPPED
+[INFO] Apache Tika Pipes Iterators ........................ SKIPPED
+[INFO] Apache Tika Pipes Iterator - CSV ................... SKIPPED
+[INFO] Apache Tika Pipes Iterator - JDBC .................. SKIPPED
+[INFO] Apache Tika Pipes Iterator - S3 .................... SKIPPED
+[INFO] Apache Tika Pipes Iterator - Kafka ................. SKIPPED
+[INFO] Apache Tika Pipes Iterator - Solr .................. SKIPPED
+[INFO] Apache Tika Pipes Iterator - Google Cloud Storage .. SKIPPED
+[INFO] Apache Tika Pipes Iterator - Azure Blob Storage .... SKIPPED
+[INFO] Apache Tika Pipes Reporters ........................ SKIPPED
+[INFO] Apache Tika Pipes Reporter - OpenSearch ............ SKIPPED
+[INFO] Apache Tika Pipes Reporter - FileSystem Status Reporter SKIPPED
+[INFO] Apache Tika Pipes Reporter - JDBC Pipes Reporter ... SKIPPED
+[INFO] Apache Tika Async CLI .............................. SKIPPED
+[INFO] Apache Tika application ............................ SKIPPED
+[INFO] Apache Tika translate .............................. SKIPPED
+[INFO] Apache Tika server module .......................... SKIPPED
+[INFO] Apache Tika server core ............................ SKIPPED
+[INFO] Apache Tika standard server ........................ SKIPPED
+[INFO] Apache Tika server client .......................... SKIPPED
+[INFO] Apache Tika eval module ............................ SKIPPED
+[INFO] Apache Tika eval core .............................. SKIPPED
+[INFO] Apache Tika server tika-eval handler ............... SKIPPED
+[INFO] Apache Tika integration tests ...................... SKIPPED
+[INFO] Apache Tika Apache Solr integration tests .......... SKIPPED
+[INFO] Apache Tika OpenSearch integration tests ........... SKIPPED
+[INFO] Apache Tika S3 pipes integration tests ............. SKIPPED
+[INFO] tika-resource-loading-tests ........................ SKIPPED
+[INFO] Apache Tika Kafka pipes integration tests .......... SKIPPED
+[INFO] Apache Tika eval application ....................... SKIPPED
+[INFO] Apache Tika fuzzing ................................ SKIPPED
+[INFO] Apache Tika examples ............................... SKIPPED
+[INFO] Apache Tika Java-7 Components ...................... SKIPPED
+[INFO] Apache Tika Detectors .............................. SKIPPED
+[INFO] Apache Tika Siegfried wrapper ...................... SKIPPED
+[INFO] Apache Tika ........................................ SUCCESS [01:55 min]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:58 min
+[INFO] Finished at: 2026-11-25T02:30:01Z
+[INFO] ------------------------------------------------------------------------

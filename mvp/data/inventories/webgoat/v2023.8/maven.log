@@ -1,0 +1,19 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.owasp.webgoat:webgoat >----------------------
+[INFO] Building WebGoat 2023.8
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- cyclonedx-maven-plugin:2.9.1:makeAggregateBom (default-cli) @ webgoat ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.6 with 168 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): /home/dav/code/creativityquarks/entreprise-knowledge-intel-pipeline/mvp/data/worktrees/webgoat/v2023.8/target/bom.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO]            attaching as webgoat-2023.8-cyclonedx.json
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.900 s
+[INFO] Finished at: 2026-11-25T02:08:31Z
+[INFO] ------------------------------------------------------------------------
