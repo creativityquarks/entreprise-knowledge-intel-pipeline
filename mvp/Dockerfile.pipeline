@@ -8,4 +8,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run Bronze fetch (dumps to GCS) -> Silver BigQuery MERGE -> Gold dbt build
-CMD ["sh", "-c", "python fetch_live.py --generated && python load_silver_to_bigquery.py && python build_gold.py"]
+# fetch_live exits 1 on PARTIAL (e.g. pdfbox/2.0.29 has no inventory, skipped queries): still publish what was assessed.
+CMD ["sh", "-c", "python fetch_live.py --generated || echo 'fetch_live finished PARTIAL, continuing'; python load_silver_to_bigquery.py && python build_gold.py"]

@@ -169,6 +169,9 @@ def main(data_dir=None, demo=False):
             key=lambda b: b.name,
         )
         manifests = [(f'gs://{bucket_name}/{b.name}', json.loads(b.download_as_bytes())) for b in blobs]
+        # Demo and live runs share one bucket; only replay manifests of the requested mode.
+        mode = 'SYNTHETIC_OFFLINE' if demo else 'LIVE'
+        manifests = [(p, m) for p, m in manifests if isinstance(m, dict) and m.get('mode') == mode]
     else:
         paths = sorted((data_dir / 'metadata' / 'runs').glob('*.json'))
         manifests = [(str(path), json.loads(path.read_text())) for path in paths]
