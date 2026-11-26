@@ -17,7 +17,8 @@ def create_pipeline(mode):
     with DAG(
         dag_id=f"knowledge_pipeline_{mode}",
         start_date=datetime(2026, 11, 26, tzinfo=timezone.utc),
-        schedule=None,
+        # schedule=None,
+        schedule="0 13 * * *" if mode == "live" else None, # Runs daily at 13h UTC
         catchup=False,
         max_active_runs=1,
         default_args={
