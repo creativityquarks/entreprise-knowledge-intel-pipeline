@@ -8,3 +8,5 @@ python-dotenv>=1,<2
 dbt-core>=1.9,<1.10
 dbt-bigquery>=1.9,<1.10
 streamlit>=1.40,<2
+altair>=5,<6
+pyvis>=0.3.2,<1
